@@ -118,7 +118,7 @@
           <Image iconType="3" name="/recursos/32px_simulador.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="SImulador"/>
-        <Property name="toolTipText" type="java.lang.String" value="Simula os juros para parcelas."/>
+        <Property name="toolTipText" type="java.lang.String" value="Simular compras a vista ou parceladas."/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="verticalTextPosition" type="int" value="3"/>
       </Properties>

@@ -62,7 +62,7 @@ public class JanelaMainMenu extends javax.swing.JFrame {
 
         buttonSimulador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_simulador.png"))); // NOI18N
         buttonSimulador.setText("SImulador");
-        buttonSimulador.setToolTipText("Simula os juros para parcelas.");
+        buttonSimulador.setToolTipText("Simular compras a vista ou parceladas.");
         buttonSimulador.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonSimulador.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
