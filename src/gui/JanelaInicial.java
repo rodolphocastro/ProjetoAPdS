@@ -32,6 +32,7 @@ public class JanelaInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[Sistema de Gestão Financeira] SGF - 2014");
+        setResizable(false);
 
         labelWelcome.setText("Seja bem vindo ao SGF 2014, escolha uma opção:");
 

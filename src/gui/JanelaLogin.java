@@ -38,6 +38,7 @@ public class JanelaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[SGF - 2014] Login");
+        setResizable(false);
 
         labelAviso.setText("Insira seus dados:");
 
