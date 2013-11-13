@@ -37,6 +37,7 @@ public class JanelaLogin extends javax.swing.JFrame {
         buttonLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("[SGF - 2014] Login");
 
         labelAviso.setText("Insira seus dados:");
 
@@ -49,6 +50,7 @@ public class JanelaLogin extends javax.swing.JFrame {
 
         buttonLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_login.png"))); // NOI18N
         buttonLogin.setText("Login");
+        buttonLogin.setToolTipText("Efetua o login com as credenciais fornecidas.");
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLoginActionPerformed(evt);
