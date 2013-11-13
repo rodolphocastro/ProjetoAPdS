@@ -35,9 +35,11 @@ public class JanelaInicial extends javax.swing.JFrame {
 
         labelWelcome.setText("Seja bem vindo ao SGF 2014, escolha uma opção:");
 
+        buttonCadastrarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_addUser.png"))); // NOI18N
         buttonCadastrarUsuario.setText("Cadastrar");
         buttonCadastrarUsuario.setToolTipText("Cadastrar um novo usuário.");
 
+        buttonLoginUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_login.png"))); // NOI18N
         buttonLoginUsuario.setText("Login");
         buttonLoginUsuario.setToolTipText("Fazer login com um usuário já existente.");
 
@@ -61,10 +63,12 @@ public class JanelaInicial extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(labelWelcome)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonCadastrarUsuario)
-                    .addComponent(buttonLoginUsuario))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(buttonLoginUsuario)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(buttonCadastrarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(1, 1, 1)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         getAccessibleContext().setAccessibleDescription("");

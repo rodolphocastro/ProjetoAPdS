@@ -47,11 +47,14 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="labelWelcome" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="buttonCadastrarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="buttonLoginUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonLoginUsuario" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="buttonCadastrarUsuario" max="32767" attributes="0"/>
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="21" max="32767" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,12 +67,18 @@
     </Component>
     <Component class="javax.swing.JButton" name="buttonCadastrarUsuario">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/recursos/24px_addUser.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
         <Property name="toolTipText" type="java.lang.String" value="Cadastrar um novo usu&#xe1;rio."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="buttonLoginUsuario">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/recursos/24px_login.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Login"/>
         <Property name="toolTipText" type="java.lang.String" value="Fazer login com um usu&#xe1;rio j&#xe1; existente."/>
       </Properties>
