@@ -1,13 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package controle;
+
+import java.sql.Connection;
 
 /**
  *
  * @author alvesrc
  */
 public class Controle {
+    private Connection c;
     
 }
