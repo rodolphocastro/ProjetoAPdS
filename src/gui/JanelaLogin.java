@@ -46,6 +46,8 @@ public class JanelaLogin extends javax.swing.JFrame {
 
         labelSenha.setText("Senha:");
 
+        fieldInputLogin.setToolTipText("Digite o seu login.");
+
         buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCancelar.setText("Cancelar");
 
