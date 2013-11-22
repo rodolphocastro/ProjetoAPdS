@@ -34,10 +34,13 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
         fieldInputLogin = new javax.swing.JTextField();
         fieldInputSenha = new javax.swing.JPasswordField();
         buttonOk = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        buttonCancelar = new javax.swing.JButton();
+        labelSobrenome = new javax.swing.JLabel();
+        fieldInputSobrenome = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Cadastrar Usuário");
+        setResizable(false);
 
         labelAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelAviso.setText("Insira abaixo os dados do novo usuário a ser cadastrado");
@@ -51,36 +54,59 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
         labelSenha.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelSenha.setText("Senha:");
 
-        buttonOk.setText("Ok");
+        fieldInputNome.setToolTipText("O nome do usuário a ser cadastrado.");
 
-        jButton1.setText("Cancelar");
+        fieldInputLogin.setToolTipText("O login para o novo usuário.");
+
+        fieldInputSenha.setToolTipText("A senha de acesso para o novo usuário.");
+
+        buttonOk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
+        buttonOk.setText("Cadastrar");
+        buttonOk.setToolTipText("Efetuar o cadastro.");
+        buttonOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonOkActionPerformed(evt);
+            }
+        });
+
+        buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        buttonCancelar.setText("Cancelar");
+        buttonCancelar.setToolTipText("Cancelar o cadastro.");
+
+        labelSobrenome.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelSobrenome.setText("Sobrenome:");
+
+        fieldInputSobrenome.setToolTipText("O sobrenome do usuário a ser cadastrado.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(labelAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelSenha, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(labelLogin, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelSobrenome, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(labelNome, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(fieldInputSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldInputSenha)
                             .addComponent(fieldInputLogin)
-                            .addComponent(fieldInputNome))
-                        .addGap(150, 150, 150))
+                            .addComponent(fieldInputSobrenome)
+                            .addComponent(fieldInputNome, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonOk, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 3, Short.MAX_VALUE)
+                                .addComponent(labelAviso))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(buttonCancelar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(buttonOk)))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -88,27 +114,35 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNome)
                     .addComponent(fieldInputNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelLogin)
-                    .addComponent(fieldInputLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldInputSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelSobrenome))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldInputLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelLogin))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(fieldInputSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelSenha))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buttonOk)
-                    .addComponent(jButton1))
-                .addContainerGap())
+                    .addComponent(buttonCancelar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
+
+    }//GEN-LAST:event_buttonOkActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,14 +179,16 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonCancelar;
     private javax.swing.JButton buttonOk;
     private javax.swing.JTextField fieldInputLogin;
     private javax.swing.JTextField fieldInputNome;
     private javax.swing.JPasswordField fieldInputSenha;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField fieldInputSobrenome;
     private javax.swing.JLabel labelAviso;
     private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelSenha;
+    private javax.swing.JLabel labelSobrenome;
     // End of variables declaration//GEN-END:variables
 }

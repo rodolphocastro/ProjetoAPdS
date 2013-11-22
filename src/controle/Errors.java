@@ -5,15 +5,36 @@ package controle;
  * @author ALVES, R.C.
  */
 public interface Errors {
+    
+    /**
+     * Código de erro desconhecido ou ainda não cadastrado na interface
+     */
+    public static final int UNKNOWN_ERROR = 101;
+    
+    /**
+     * Descrição para o erro desconhecido
+     */
+    public static final String UNKOWN_ERROR_DESC = "Erro desconhecido.";
+    
     /**
      * Código de erro para quando a database não é encontrada
      */
-    public static final int DATABASE_NOT_FOUND = 401;
+    public static final int DATABASE_NOT_FOUND = 201;
     
     /**
      * Descrição para o erro de database not found
      */
     public static final String DATABASE_NOT_FOUND_DESC = "O arquivo database.db não foi encontrado na pasta " + Commons.PATH_TO_DATABASE + ".";
+    
+    /**
+     * Código de erro para quando não foi possível criar uma tabela
+     */
+    public static final int DATABASE_INVALID_CREATE_TABLE = 202;
+    
+    /**
+     * Descrição para o erro de criação inválida de tabela
+     */
+    public static final String DATABASE_INVALID_CREATE_TABLE_DESC = "Ocorreu um erro ao tentar criar uma table na database.";
     
     /**
      * Código de erro para quando o arquivo de opções não é encontrado.
@@ -28,7 +49,7 @@ public interface Errors {
     /**
      * Código de erro para quando a biblioteca sqlite não foi encontrada,
      */
-    public static final int SQLITE_LIBRARY_NOT_FOUND = 201;
+    public static final int SQLITE_LIBRARY_NOT_FOUND = 401;
     
     /**
      * Descrição para o erro de sqlite library not found
@@ -38,7 +59,7 @@ public interface Errors {
     /**
      * Código de erro para quando a chave inserida viola a unicidade da PrimaryKey
      */
-    public static final int SQLITE_PK_NOT_UNIQUE = 202;
+    public static final int SQLITE_PK_NOT_UNIQUE = 402;
     
     /**
      * Descrição para o erro do sqlite pk not unique
