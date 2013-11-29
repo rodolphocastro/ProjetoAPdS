@@ -4,6 +4,8 @@
  */
 package gui;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author Thiago Matos
@@ -59,6 +61,11 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
         fieldInputLogin.setToolTipText("O login para o novo usuário.");
 
         fieldInputSenha.setToolTipText("A senha de acesso para o novo usuário.");
+        fieldInputSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                fieldInputSenhaKeyPressed(evt);
+            }
+        });
 
         buttonOk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
         buttonOk.setText("Cadastrar");
@@ -127,7 +134,7 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
                     .addComponent(fieldInputLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelLogin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fieldInputSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelSenha))
                 .addGap(18, 18, 18)
@@ -143,6 +150,12 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
     private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
 
     }//GEN-LAST:event_buttonOkActionPerformed
+
+    private void fieldInputSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldInputSenhaKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            buttonOk.doClick();
+        }
+    }//GEN-LAST:event_fieldInputSenhaKeyPressed
 
     /**
      * @param args the command line arguments
