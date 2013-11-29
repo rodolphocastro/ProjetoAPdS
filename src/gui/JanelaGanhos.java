@@ -48,7 +48,9 @@ public class JanelaGanhos extends javax.swing.JFrame {
         paneBuscarDespesa = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("[SGF - 2014] Cadastro de Ganhos");
+        setTitle("[SGF - 2014] Ganhos");
+        setLocationByPlatform(true);
+        setResizable(false);
 
         labelCadastrarGanhoAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelCadastrarGanhoAviso.setText("Insira os dados do ganho a ser cadastrado:");
@@ -77,20 +79,20 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelCadastroGanhoDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelAno)
-                    .addComponent(labelMes)
-                    .addComponent(labelDia))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
+                    .addComponent(labelDia, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelMes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelAno, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         panelCadastroGanhoDataLayout.setVerticalGroup(
             panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCadastroGanhoDataLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap()
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelDia)
                     .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -122,28 +124,28 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDescrição)
-                    .addComponent(labelValor))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(labelValor, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelDescrição, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(fieldInputDescrição)
                     .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
-                        .addComponent(formattedFieldInputValor, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 113, Short.MAX_VALUE)))
+                        .addComponent(formattedFieldInputValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 79, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelCadastroGanhoDadosLayout.setVerticalGroup(
             panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addContainerGap()
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelDescrição)
-                    .addComponent(fieldInputDescrição, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(fieldInputDescrição))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelValor)
-                    .addComponent(formattedFieldInputValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(formattedFieldInputValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelValor))
+                .addContainerGap())
         );
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
@@ -154,7 +156,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         jButton2.setText("Cancelar");
         jButton2.setToolTipText("Cancelar o cadastro.");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
         jButton3.setText("Adicionar");
         jButton3.setToolTipText("Cadastrar o ganho no banco de dados.");
 
@@ -162,25 +164,22 @@ public class JanelaGanhos extends javax.swing.JFrame {
         panelCadastrarDespesa.setLayout(panelCadastrarDespesaLayout);
         panelCadastrarDespesaLayout.setHorizontalGroup(
             panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelCadastrarDespesaLayout.createSequentialGroup()
-                        .addContainerGap()
+            .addGroup(panelCadastrarDespesaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
+                        .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
                         .addComponent(labelCadastrarGanhoAviso)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelCadastrarDespesaLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelCadastrarDespesaLayout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton3))
-                            .addGroup(panelCadastrarDespesaLayout.createSequentialGroup()
-                                .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3)))
+                .addContainerGap())
         );
         panelCadastrarDespesaLayout.setVerticalGroup(
             panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,15 +188,15 @@ public class JanelaGanhos extends javax.swing.JFrame {
                 .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCadastrarGanhoAviso)
                     .addComponent(jButton1))
-                .addGap(23, 23, 23)
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3)
+                    .addComponent(jButton2))
+                .addContainerGap())
         );
 
         mainTabbedPane.addTab("Cadastrar", panelCadastrarDespesa);
@@ -206,11 +205,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         paneRemoverDespesa.setLayout(paneRemoverDespesaLayout);
         paneRemoverDespesaLayout.setHorizontalGroup(
             paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGap(0, 473, Short.MAX_VALUE)
         );
         paneRemoverDespesaLayout.setVerticalGroup(
             paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 266, Short.MAX_VALUE)
+            .addGap(0, 232, Short.MAX_VALUE)
         );
 
         mainTabbedPane.addTab("Remover", paneRemoverDespesa);
@@ -219,11 +218,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         paneBuscarDespesa.setLayout(paneBuscarDespesaLayout);
         paneBuscarDespesaLayout.setHorizontalGroup(
             paneBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGap(0, 473, Short.MAX_VALUE)
         );
         paneBuscarDespesaLayout.setVerticalGroup(
             paneBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 266, Short.MAX_VALUE)
+            .addGap(0, 232, Short.MAX_VALUE)
         );
 
         mainTabbedPane.addTab("Buscar", paneBuscarDespesa);

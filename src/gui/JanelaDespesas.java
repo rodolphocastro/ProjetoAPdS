@@ -28,9 +28,6 @@ public class JanelaDespesas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonCadastrarDespesaLimpar1 = new javax.swing.JButton();
-        buttonCadastrarDespesaAdicionar1 = new javax.swing.JButton();
-        buttonCadastrarDespesaCancelar1 = new javax.swing.JButton();
         mainTabbedPane = new javax.swing.JTabbedPane();
         panelCadastrarDespesa = new javax.swing.JPanel();
         labelCadastrarDespesalAviso = new javax.swing.JLabel();
@@ -51,31 +48,25 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonCadastrarDespesaCancelar = new javax.swing.JButton();
         panellRemoverDespesa = new javax.swing.JPanel();
         labelRemoverDespesalAviso = new javax.swing.JLabel();
-        panelRemoverrDespesaDados = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        panelRemoverrDespesaData1 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jSpinner4 = new javax.swing.JSpinner();
-        jSpinner5 = new javax.swing.JSpinner();
-        jSpinner6 = new javax.swing.JSpinner();
+        panelRemoverDespesaDados = new javax.swing.JPanel();
+        labelRemoverDespesaDesc = new javax.swing.JLabel();
+        fieldInputRemoverDespesaDesc = new javax.swing.JTextField();
+        panelRemoverDespesaData = new javax.swing.JPanel();
+        labelRemoverDespesaDia = new javax.swing.JLabel();
+        labelRemoverDespesaMes = new javax.swing.JLabel();
+        labelRemoverDespesaAno = new javax.swing.JLabel();
+        spinnerRemoverDespesaDia = new javax.swing.JSpinner();
+        spinnerRemoverDespesaMes = new javax.swing.JSpinner();
+        spinnerRemoverDespesaAno = new javax.swing.JSpinner();
+        buttonRemoverDespesaLimpar = new javax.swing.JButton();
+        buttonRemoverDespesaRemover = new javax.swing.JButton();
+        buttonRemoverDespesaCancelar = new javax.swing.JButton();
         panelBuscarDespesa = new javax.swing.JPanel();
 
-        buttonCadastrarDespesaLimpar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
-        buttonCadastrarDespesaLimpar1.setText("Limpar");
-        buttonCadastrarDespesaLimpar1.setToolTipText("Limpar os campos da tela.");
-
-        buttonCadastrarDespesaAdicionar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
-        buttonCadastrarDespesaAdicionar1.setText("Adicionar");
-        buttonCadastrarDespesaAdicionar1.setToolTipText("Cadastrar a despesa no banco de dados.");
-
-        buttonCadastrarDespesaCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
-        buttonCadastrarDespesaCancelar1.setText("Cancelar");
-        buttonCadastrarDespesaCancelar1.setToolTipText("Cancelar o cadastro.");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("[SGF - 2014] Despesas");
+        setLocationByPlatform(true);
+        setResizable(false);
 
         labelCadastrarDespesalAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelCadastrarDespesalAviso.setText("Insira os dados da despesa a ser cadastrada:");
@@ -105,7 +96,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastrarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(fieldInputCadastrarDespesaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldInputCadastrarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldInputCadastrarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelCadastrarDespesaDadosLayout.setVerticalGroup(
@@ -178,7 +169,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonCadastrarDespesaLimpar.setText("Limpar");
         buttonCadastrarDespesaLimpar.setToolTipText("Limpar os campos da tela.");
 
-        buttonCadastrarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
+        buttonCadastrarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
         buttonCadastrarDespesaAdicionar.setText("Adicionar");
         buttonCadastrarDespesaAdicionar.setToolTipText("Cadastrar a despesa no banco de dados.");
 
@@ -215,9 +206,9 @@ public class JanelaDespesas extends javax.swing.JFrame {
                     .addComponent(labelCadastrarDespesalAviso)
                     .addComponent(buttonCadastrarDespesaLimpar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelCadastrarDespesaData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelCadastrarDespesaDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelCadastrarDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelCadastrarDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonCadastrarDespesaAdicionar)
@@ -231,84 +222,93 @@ public class JanelaDespesas extends javax.swing.JFrame {
         labelRemoverDespesalAviso.setText("Insira os dados da despesa a ser cadastrada:");
         labelRemoverDespesalAviso.setToolTipText("");
 
-        panelRemoverrDespesaDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
+        panelRemoverDespesaDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
 
-        jLabel6.setText("Descrição:");
+        labelRemoverDespesaDesc.setText("Descrição:");
 
-        jTextField2.setToolTipText("Uma breve descrição da despesa a ser cadastrada.");
+        fieldInputRemoverDespesaDesc.setToolTipText("Uma breve descrição da despesa a ser cadastrada.");
 
-        javax.swing.GroupLayout panelRemoverrDespesaDadosLayout = new javax.swing.GroupLayout(panelRemoverrDespesaDados);
-        panelRemoverrDespesaDados.setLayout(panelRemoverrDespesaDadosLayout);
-        panelRemoverrDespesaDadosLayout.setHorizontalGroup(
-            panelRemoverrDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRemoverrDespesaDadosLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelRemoverDespesaDadosLayout = new javax.swing.GroupLayout(panelRemoverDespesaDados);
+        panelRemoverDespesaDados.setLayout(panelRemoverDespesaDadosLayout);
+        panelRemoverDespesaDadosLayout.setHorizontalGroup(
+            panelRemoverDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverDespesaDadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
+                .addComponent(labelRemoverDespesaDesc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fieldInputRemoverDespesaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelRemoverrDespesaDadosLayout.setVerticalGroup(
-            panelRemoverrDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRemoverrDespesaDadosLayout.createSequentialGroup()
+        panelRemoverDespesaDadosLayout.setVerticalGroup(
+            panelRemoverDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverDespesaDadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelRemoverrDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRemoverDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverDespesaDesc)
+                    .addComponent(fieldInputRemoverDespesaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelRemoverrDespesaData1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
+        panelRemoverDespesaData.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
 
-        jLabel8.setText("Dia:");
+        labelRemoverDespesaDia.setText("Dia:");
 
-        jLabel9.setText("Mês:");
+        labelRemoverDespesaMes.setText("Mês:");
 
-        jLabel10.setText("Ano:");
+        labelRemoverDespesaAno.setText("Ano:");
 
-        jSpinner4.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
-        jSpinner4.setToolTipText("O dia em que a despesa ocorreu.");
+        spinnerRemoverDespesaDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
+        spinnerRemoverDespesaDia.setToolTipText("O dia em que a despesa ocorreu.");
 
-        jSpinner5.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
-        jSpinner5.setToolTipText("O mês em que a despesa ocorreu.");
+        spinnerRemoverDespesaMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        spinnerRemoverDespesaMes.setToolTipText("O mês em que a despesa ocorreu.");
 
-        jSpinner6.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
-        jSpinner6.setToolTipText("O ano em que a despesa ocorreu.");
+        spinnerRemoverDespesaAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
+        spinnerRemoverDespesaAno.setToolTipText("O ano em que a despesa ocorreu.");
 
-        javax.swing.GroupLayout panelRemoverrDespesaData1Layout = new javax.swing.GroupLayout(panelRemoverrDespesaData1);
-        panelRemoverrDespesaData1.setLayout(panelRemoverrDespesaData1Layout);
-        panelRemoverrDespesaData1Layout.setHorizontalGroup(
-            panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRemoverrDespesaData1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelRemoverDespesaDataLayout = new javax.swing.GroupLayout(panelRemoverDespesaData);
+        panelRemoverDespesaData.setLayout(panelRemoverDespesaDataLayout);
+        panelRemoverDespesaDataLayout.setHorizontalGroup(
+            panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverDespesaDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRemoverDespesaDia, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelRemoverDespesaMes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelRemoverDespesaAno, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addGroup(panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spinnerRemoverDespesaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerRemoverDespesaMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerRemoverDespesaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        panelRemoverrDespesaData1Layout.setVerticalGroup(
-            panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRemoverrDespesaData1Layout.createSequentialGroup()
+        panelRemoverDespesaDataLayout.setVerticalGroup(
+            panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverDespesaDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverDespesaDia)
+                    .addComponent(spinnerRemoverDespesaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverDespesaMes)
+                    .addComponent(spinnerRemoverDespesaMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelRemoverrDespesaData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelRemoverDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverDespesaAno)
+                    .addComponent(spinnerRemoverDespesaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
+
+        buttonRemoverDespesaLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
+        buttonRemoverDespesaLimpar.setText("Limpar");
+
+        buttonRemoverDespesaRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_delete.png"))); // NOI18N
+        buttonRemoverDespesaRemover.setText("Remover");
+
+        buttonRemoverDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        buttonRemoverDespesaCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout panellRemoverDespesaLayout = new javax.swing.GroupLayout(panellRemoverDespesa);
         panellRemoverDespesa.setLayout(panellRemoverDespesaLayout);
@@ -316,33 +316,48 @@ public class JanelaDespesas extends javax.swing.JFrame {
             panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panellRemoverDespesaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelRemoverDespesalAviso)
+                .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(panellRemoverDespesaLayout.createSequentialGroup()
-                        .addComponent(panelRemoverrDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonRemoverDespesaCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonRemoverDespesaRemover))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panellRemoverDespesaLayout.createSequentialGroup()
+                        .addComponent(labelRemoverDespesalAviso)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonRemoverDespesaLimpar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panellRemoverDespesaLayout.createSequentialGroup()
+                        .addComponent(panelRemoverDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelRemoverrDespesaData1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(panelRemoverDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panellRemoverDespesaLayout.setVerticalGroup(
             panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panellRemoverDespesaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelRemoverDespesalAviso)
+                .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverDespesalAviso)
+                    .addComponent(buttonRemoverDespesaLimpar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelRemoverrDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelRemoverrDespesaData1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(69, Short.MAX_VALUE))
+                    .addComponent(panelRemoverDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelRemoverDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonRemoverDespesaCancelar)
+                    .addComponent(buttonRemoverDespesaRemover))
+                .addContainerGap())
         );
 
         mainTabbedPane.addTab("Remover", panellRemoverDespesa);
+
+        panelBuscarDespesa.setPreferredSize(new java.awt.Dimension(473, 231));
 
         javax.swing.GroupLayout panelBuscarDespesaLayout = new javax.swing.GroupLayout(panelBuscarDespesa);
         panelBuscarDespesa.setLayout(panelBuscarDespesaLayout);
         panelBuscarDespesaLayout.setHorizontalGroup(
             panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 485, Short.MAX_VALUE)
+            .addGap(0, 473, Short.MAX_VALUE)
         );
         panelBuscarDespesaLayout.setVerticalGroup(
             panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,15 +370,17 @@ public class JanelaDespesas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 478, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(mainTabbedPane))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 259, Short.MAX_VALUE)
+            .addGap(0, 260, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainTabbedPane))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(mainTabbedPane)
+                    .addGap(1, 1, 1)))
         );
 
         pack();
@@ -406,38 +423,38 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastrarDespesaAdicionar;
-    private javax.swing.JButton buttonCadastrarDespesaAdicionar1;
     private javax.swing.JButton buttonCadastrarDespesaCancelar;
-    private javax.swing.JButton buttonCadastrarDespesaCancelar1;
     private javax.swing.JButton buttonCadastrarDespesaLimpar;
-    private javax.swing.JButton buttonCadastrarDespesaLimpar1;
+    private javax.swing.JButton buttonRemoverDespesaCancelar;
+    private javax.swing.JButton buttonRemoverDespesaLimpar;
+    private javax.swing.JButton buttonRemoverDespesaRemover;
     private javax.swing.JTextField fieldInputCadastrarDespesaDesc;
     private javax.swing.JFormattedTextField fieldInputCadastrarDespesaValor;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner5;
-    private javax.swing.JSpinner jSpinner6;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField fieldInputRemoverDespesaDesc;
     private javax.swing.JLabel labelCadastrarDespesaAno;
     private javax.swing.JLabel labelCadastrarDespesaDesc;
     private javax.swing.JLabel labelCadastrarDespesaDia;
     private javax.swing.JLabel labelCadastrarDespesaMes;
     private javax.swing.JLabel labelCadastrarDespesaValor;
     private javax.swing.JLabel labelCadastrarDespesalAviso;
+    private javax.swing.JLabel labelRemoverDespesaAno;
+    private javax.swing.JLabel labelRemoverDespesaDesc;
+    private javax.swing.JLabel labelRemoverDespesaDia;
+    private javax.swing.JLabel labelRemoverDespesaMes;
     private javax.swing.JLabel labelRemoverDespesalAviso;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JPanel panelBuscarDespesa;
     private javax.swing.JPanel panelCadastrarDespesa;
     private javax.swing.JPanel panelCadastrarDespesaDados;
     private javax.swing.JPanel panelCadastrarDespesaData;
-    private javax.swing.JPanel panelRemoverrDespesaDados;
-    private javax.swing.JPanel panelRemoverrDespesaData1;
+    private javax.swing.JPanel panelRemoverDespesaDados;
+    private javax.swing.JPanel panelRemoverDespesaData;
     private javax.swing.JPanel panellRemoverDespesa;
     private javax.swing.JSpinner spinnerCadastrarDespesaAno;
     private javax.swing.JSpinner spinnerCadastrarDespesaDia;
     private javax.swing.JSpinner spinnerCadastrarDespesaMes;
+    private javax.swing.JSpinner spinnerRemoverDespesaAno;
+    private javax.swing.JSpinner spinnerRemoverDespesaDia;
+    private javax.swing.JSpinner spinnerRemoverDespesaMes;
     // End of variables declaration//GEN-END:variables
 }
