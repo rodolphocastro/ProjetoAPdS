@@ -13,6 +13,9 @@ public class ErrorHandler implements Errors{
         report = report.concat("Caminho para as opções: " + Commons.PATH_TO_OPTIONS + "\n");
         report = report.concat("Caminho para a database: " + Commons.PATH_TO_DATABASE + "\n");
         switch(codErro){
+            case(UNKNOWN_ERROR):
+                report = report.concat(gerarDescErro(UNKNOWN_ERROR, UNKNOWN_ERROR_DESC));
+                break;
             //Database não encontrada
             case(DATABASE_NOT_FOUND):
                 report = report.concat(gerarDescErro(DATABASE_NOT_FOUND, DATABASE_NOT_FOUND_DESC));

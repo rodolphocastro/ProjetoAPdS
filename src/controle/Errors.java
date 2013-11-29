@@ -14,7 +14,7 @@ public interface Errors {
     /**
      * Descrição para o erro desconhecido
      */
-    public static final String UNKOWN_ERROR_DESC = "Erro desconhecido.";
+    public static final String UNKNOWN_ERROR_DESC = "Erro desconhecido.";
     
     /**
      * Código de erro para quando a database não é encontrada
