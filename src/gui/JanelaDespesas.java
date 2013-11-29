@@ -219,7 +219,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
         mainTabbedPane.addTab("Cadastrar", panelCadastrarDespesa);
 
         labelRemoverDespesalAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        labelRemoverDespesalAviso.setText("Insira os dados da despesa a ser cadastrada:");
+        labelRemoverDespesalAviso.setText("Insira os dados da despesa a ser removida:");
         labelRemoverDespesalAviso.setToolTipText("");
 
         panelRemoverDespesaDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));

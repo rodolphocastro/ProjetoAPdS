@@ -45,6 +45,20 @@ public class JanelaGanhos extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         paneRemoverDespesa = new javax.swing.JPanel();
+        labelRemoverGanhoAviso = new javax.swing.JLabel();
+        panelRemoverGanhoDados = new javax.swing.JPanel();
+        labelRemoverGanhoDesc = new javax.swing.JLabel();
+        fieldInputRemoverGanhoDesc = new javax.swing.JTextField();
+        panelRemoverGanhoData = new javax.swing.JPanel();
+        labelRemoverGanhoDia = new javax.swing.JLabel();
+        labelRemoverGanhoMes = new javax.swing.JLabel();
+        labelRemoverGanhoAno = new javax.swing.JLabel();
+        spinnerRemoverGanhoDia = new javax.swing.JSpinner();
+        spinnerRemoverGanhoMes = new javax.swing.JSpinner();
+        spinnerRemoverGanhoAno = new javax.swing.JSpinner();
+        buttonRemoverGanhoLimpar = new javax.swing.JButton();
+        buttonRemoverGanhoRemover = new javax.swing.JButton();
+        buttonRemoverGanhoCancelar = new javax.swing.JButton();
         paneBuscarDespesa = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -193,7 +207,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
                     .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3)
                     .addComponent(jButton2))
                 .addContainerGap())
@@ -201,15 +215,137 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         mainTabbedPane.addTab("Cadastrar", panelCadastrarDespesa);
 
+        labelRemoverGanhoAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelRemoverGanhoAviso.setText("Insira os dados do ganho a ser removido:");
+
+        panelRemoverGanhoDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
+
+        labelRemoverGanhoDesc.setText("Descrição:");
+
+        fieldInputRemoverGanhoDesc.setToolTipText("Insira uma descrição dos dados.");
+
+        javax.swing.GroupLayout panelRemoverGanhoDadosLayout = new javax.swing.GroupLayout(panelRemoverGanhoDados);
+        panelRemoverGanhoDados.setLayout(panelRemoverGanhoDadosLayout);
+        panelRemoverGanhoDadosLayout.setHorizontalGroup(
+            panelRemoverGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverGanhoDadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelRemoverGanhoDesc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldInputRemoverGanhoDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelRemoverGanhoDadosLayout.setVerticalGroup(
+            panelRemoverGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverGanhoDadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRemoverGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverGanhoDesc)
+                    .addComponent(fieldInputRemoverGanhoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        panelRemoverGanhoData.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
+
+        labelRemoverGanhoDia.setText("Dia:");
+
+        labelRemoverGanhoMes.setText("Mês:");
+
+        labelRemoverGanhoAno.setText("Ano:");
+
+        spinnerRemoverGanhoDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
+        spinnerRemoverGanhoDia.setToolTipText("Insira o dia componente da data.");
+
+        spinnerRemoverGanhoMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        spinnerRemoverGanhoMes.setToolTipText("Insira o mês componente da data.");
+
+        spinnerRemoverGanhoAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
+        spinnerRemoverGanhoAno.setToolTipText("Insira o ano componente da data.");
+
+        javax.swing.GroupLayout panelRemoverGanhoDataLayout = new javax.swing.GroupLayout(panelRemoverGanhoData);
+        panelRemoverGanhoData.setLayout(panelRemoverGanhoDataLayout);
+        panelRemoverGanhoDataLayout.setHorizontalGroup(
+            panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverGanhoDataLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRemoverGanhoAno)
+                    .addComponent(labelRemoverGanhoDia)
+                    .addComponent(labelRemoverGanhoMes))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spinnerRemoverGanhoAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerRemoverGanhoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerRemoverGanhoDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        panelRemoverGanhoDataLayout.setVerticalGroup(
+            panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRemoverGanhoDataLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverGanhoDia)
+                    .addComponent(spinnerRemoverGanhoDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverGanhoMes)
+                    .addComponent(spinnerRemoverGanhoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverGanhoAno)
+                    .addComponent(spinnerRemoverGanhoAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        buttonRemoverGanhoLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
+        buttonRemoverGanhoLimpar.setText("Limpar");
+        buttonRemoverGanhoLimpar.setToolTipText("Limpar os campos da tela.");
+
+        buttonRemoverGanhoRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_delete.png"))); // NOI18N
+        buttonRemoverGanhoRemover.setText("Remover");
+        buttonRemoverGanhoRemover.setToolTipText("Remover ganho armazenado.");
+
+        buttonRemoverGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        buttonRemoverGanhoCancelar.setText("Cancelar");
+        buttonRemoverGanhoCancelar.setToolTipText("Cancelar remoção de ganho.");
+
         javax.swing.GroupLayout paneRemoverDespesaLayout = new javax.swing.GroupLayout(paneRemoverDespesa);
         paneRemoverDespesa.setLayout(paneRemoverDespesaLayout);
         paneRemoverDespesaLayout.setHorizontalGroup(
             paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+            .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+                        .addComponent(labelRemoverGanhoAviso)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonRemoverGanhoLimpar))
+                    .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+                        .addComponent(panelRemoverGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelRemoverGanhoData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneRemoverDespesaLayout.createSequentialGroup()
+                        .addComponent(buttonRemoverGanhoCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonRemoverGanhoRemover)))
+                .addContainerGap())
         );
         paneRemoverDespesaLayout.setVerticalGroup(
             paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 232, Short.MAX_VALUE)
+            .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRemoverGanhoAviso)
+                    .addComponent(buttonRemoverGanhoLimpar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelRemoverGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelRemoverGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonRemoverGanhoRemover)
+                    .addComponent(buttonRemoverGanhoCancelar))
+                .addContainerGap())
         );
 
         mainTabbedPane.addTab("Remover", paneRemoverDespesa);
@@ -251,7 +387,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstallelabelRemoverGanhoDescdFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
@@ -263,7 +399,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JanelaGanhos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(JanelaGanhos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndlabelRemoverGanhoAvisoeption ex) {
             java.util.logging.Logger.getLogger(JanelaGanhos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -276,7 +412,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonRemoverGanhoCancelar;
+    private javax.swing.JButton buttonRemoverGanhoLimpar;
+    private javax.swing.JButton buttonRemoverGanhoRemover;
     private javax.swing.JTextField fieldInputDescrição;
+    private javax.swing.JTextField fieldInputRemoverGanhoDesc;
     private javax.swing.JFormattedTextField formattedFieldInputValor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -289,6 +429,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private javax.swing.JLabel labelDescrição;
     private javax.swing.JLabel labelDia;
     private javax.swing.JLabel labelMes;
+    private javax.swing.JLabel labelRemoverGanhoAno;
+    private javax.swing.JLabel labelRemoverGanhoAviso;
+    private javax.swing.JLabel labelRemoverGanhoDesc;
+    private javax.swing.JLabel labelRemoverGanhoDia;
+    private javax.swing.JLabel labelRemoverGanhoMes;
     private javax.swing.JLabel labelValor;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JPanel paneBuscarDespesa;
@@ -296,5 +441,10 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private javax.swing.JPanel panelCadastrarDespesa;
     private javax.swing.JPanel panelCadastroGanhoDados;
     private javax.swing.JPanel panelCadastroGanhoData;
+    private javax.swing.JPanel panelRemoverGanhoDados;
+    private javax.swing.JPanel panelRemoverGanhoData;
+    private javax.swing.JSpinner spinnerRemoverGanhoAno;
+    private javax.swing.JSpinner spinnerRemoverGanhoDia;
+    private javax.swing.JSpinner spinnerRemoverGanhoMes;
     // End of variables declaration//GEN-END:variables
 }
