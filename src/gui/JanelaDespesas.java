@@ -62,6 +62,22 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonRemoverDespesaRemover = new javax.swing.JButton();
         buttonRemoverDespesaCancelar = new javax.swing.JButton();
         panelBuscarDespesa = new javax.swing.JPanel();
+        labelBuscarDespesaAviso = new javax.swing.JLabel();
+        panelBuscarDespesaDados = new javax.swing.JPanel();
+        labelBuscarDespesaDesc = new javax.swing.JLabel();
+        labelBuscarDespesaValor = new javax.swing.JLabel();
+        fieldInputBuscarDespesaDesc = new javax.swing.JTextField();
+        fieldInputBuscarDespesaValor = new javax.swing.JFormattedTextField();
+        panelBuscarDespesaData = new javax.swing.JPanel();
+        labelBuscarDespesaDia = new javax.swing.JLabel();
+        labelBuscarDespesaMes = new javax.swing.JLabel();
+        labelBuscarDespesaAno = new javax.swing.JLabel();
+        spinnerBuscarDespesaDia = new javax.swing.JSpinner();
+        spinnerBuscarDespesaMes = new javax.swing.JSpinner();
+        spinnerBuscarDespesaAno = new javax.swing.JSpinner();
+        buttonBuscarDespesaLimpar = new javax.swing.JButton();
+        buttonBuscarDespesaAdicionar = new javax.swing.JButton();
+        buttonBuscarDespesaCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[SGF - 2014] Despesas");
@@ -209,10 +225,10 @@ public class JanelaDespesas extends javax.swing.JFrame {
                 .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelCadastrarDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelCadastrarDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonCadastrarDespesaAdicionar)
-                    .addComponent(buttonCadastrarDespesaCancelar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonCadastrarDespesaCancelar)
+                    .addComponent(buttonCadastrarDespesaAdicionar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -342,26 +358,161 @@ public class JanelaDespesas extends javax.swing.JFrame {
                 .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelRemoverDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelRemoverDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panellRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonRemoverDespesaCancelar)
-                    .addComponent(buttonRemoverDespesaRemover))
-                .addContainerGap())
+                    .addComponent(buttonRemoverDespesaRemover)
+                    .addComponent(buttonRemoverDespesaCancelar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Remover", panellRemoverDespesa);
 
-        panelBuscarDespesa.setPreferredSize(new java.awt.Dimension(473, 231));
+        labelBuscarDespesaAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelBuscarDespesaAviso.setText("Insira os dados da despesa a ser buscada:");
+        labelBuscarDespesaAviso.setToolTipText("");
+
+        panelBuscarDespesaDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
+
+        labelBuscarDespesaDesc.setText("Descrição:");
+
+        labelBuscarDespesaValor.setText("Valor:");
+
+        fieldInputBuscarDespesaDesc.setToolTipText("Uma breve descrição da despesa a ser cadastrada.");
+
+        fieldInputBuscarDespesaValor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        fieldInputBuscarDespesaValor.setText("R$ 1.000,00");
+        fieldInputBuscarDespesaValor.setToolTipText("O valor da despesa.");
+
+        javax.swing.GroupLayout panelBuscarDespesaDadosLayout = new javax.swing.GroupLayout(panelBuscarDespesaDados);
+        panelBuscarDespesaDados.setLayout(panelBuscarDespesaDadosLayout);
+        panelBuscarDespesaDadosLayout.setHorizontalGroup(
+            panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarDespesaDadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelBuscarDespesaValor, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBuscarDespesaDesc, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldInputBuscarDespesaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldInputBuscarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelBuscarDespesaDadosLayout.setVerticalGroup(
+            panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarDespesaDadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarDespesaDesc)
+                    .addComponent(fieldInputBuscarDespesaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarDespesaValor)
+                    .addComponent(fieldInputBuscarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelBuscarDespesaData.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
+
+        labelBuscarDespesaDia.setText("Dia:");
+
+        labelBuscarDespesaMes.setText("Mês:");
+
+        labelBuscarDespesaAno.setText("Ano:");
+
+        spinnerBuscarDespesaDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
+        spinnerBuscarDespesaDia.setToolTipText("O dia em que a despesa ocorreu.");
+
+        spinnerBuscarDespesaMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        spinnerBuscarDespesaMes.setToolTipText("O mês em que a despesa ocorreu.");
+
+        spinnerBuscarDespesaAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
+        spinnerBuscarDespesaAno.setToolTipText("O ano em que a despesa ocorreu.");
+
+        javax.swing.GroupLayout panelBuscarDespesaDataLayout = new javax.swing.GroupLayout(panelBuscarDespesaData);
+        panelBuscarDespesaData.setLayout(panelBuscarDespesaDataLayout);
+        panelBuscarDespesaDataLayout.setHorizontalGroup(
+            panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarDespesaDataLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelBuscarDespesaDia, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBuscarDespesaMes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBuscarDespesaAno, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGroup(panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spinnerBuscarDespesaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerBuscarDespesaMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerBuscarDespesaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        panelBuscarDespesaDataLayout.setVerticalGroup(
+            panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarDespesaDataLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarDespesaDia)
+                    .addComponent(spinnerBuscarDespesaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarDespesaMes)
+                    .addComponent(spinnerBuscarDespesaMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelBuscarDespesaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarDespesaAno)
+                    .addComponent(spinnerBuscarDespesaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        buttonBuscarDespesaLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
+        buttonBuscarDespesaLimpar.setText("Limpar");
+        buttonBuscarDespesaLimpar.setToolTipText("Limpar os campos da tela.");
+
+        buttonBuscarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
+        buttonBuscarDespesaAdicionar.setText("Buscar");
+        buttonBuscarDespesaAdicionar.setToolTipText("Cadastrar a despesa no banco de dados.");
+
+        buttonBuscarDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        buttonBuscarDespesaCancelar.setText("Cancelar");
+        buttonBuscarDespesaCancelar.setToolTipText("Cancelar o cadastro.");
 
         javax.swing.GroupLayout panelBuscarDespesaLayout = new javax.swing.GroupLayout(panelBuscarDespesa);
         panelBuscarDespesa.setLayout(panelBuscarDespesaLayout);
         panelBuscarDespesaLayout.setHorizontalGroup(
             panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+            .addGroup(panelBuscarDespesaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(panelBuscarDespesaLayout.createSequentialGroup()
+                        .addComponent(buttonBuscarDespesaCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonBuscarDespesaAdicionar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelBuscarDespesaLayout.createSequentialGroup()
+                        .addComponent(labelBuscarDespesaAviso)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonBuscarDespesaLimpar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelBuscarDespesaLayout.createSequentialGroup()
+                        .addComponent(panelBuscarDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelBuscarDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10))
         );
         panelBuscarDespesaLayout.setVerticalGroup(
             panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 231, Short.MAX_VALUE)
+            .addGroup(panelBuscarDespesaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarDespesaAviso)
+                    .addComponent(buttonBuscarDespesaLimpar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelBuscarDespesaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelBuscarDespesaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonBuscarDespesaCancelar)
+                    .addComponent(buttonBuscarDespesaAdicionar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Buscar", panelBuscarDespesa);
@@ -376,7 +527,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 265, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(mainTabbedPane)
@@ -422,15 +573,26 @@ public class JanelaDespesas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonBuscarDespesaAdicionar;
+    private javax.swing.JButton buttonBuscarDespesaCancelar;
+    private javax.swing.JButton buttonBuscarDespesaLimpar;
     private javax.swing.JButton buttonCadastrarDespesaAdicionar;
     private javax.swing.JButton buttonCadastrarDespesaCancelar;
     private javax.swing.JButton buttonCadastrarDespesaLimpar;
     private javax.swing.JButton buttonRemoverDespesaCancelar;
     private javax.swing.JButton buttonRemoverDespesaLimpar;
     private javax.swing.JButton buttonRemoverDespesaRemover;
+    private javax.swing.JTextField fieldInputBuscarDespesaDesc;
+    private javax.swing.JFormattedTextField fieldInputBuscarDespesaValor;
     private javax.swing.JTextField fieldInputCadastrarDespesaDesc;
     private javax.swing.JFormattedTextField fieldInputCadastrarDespesaValor;
     private javax.swing.JTextField fieldInputRemoverDespesaDesc;
+    private javax.swing.JLabel labelBuscarDespesaAno;
+    private javax.swing.JLabel labelBuscarDespesaAviso;
+    private javax.swing.JLabel labelBuscarDespesaDesc;
+    private javax.swing.JLabel labelBuscarDespesaDia;
+    private javax.swing.JLabel labelBuscarDespesaMes;
+    private javax.swing.JLabel labelBuscarDespesaValor;
     private javax.swing.JLabel labelCadastrarDespesaAno;
     private javax.swing.JLabel labelCadastrarDespesaDesc;
     private javax.swing.JLabel labelCadastrarDespesaDia;
@@ -444,12 +606,17 @@ public class JanelaDespesas extends javax.swing.JFrame {
     private javax.swing.JLabel labelRemoverDespesalAviso;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JPanel panelBuscarDespesa;
+    private javax.swing.JPanel panelBuscarDespesaDados;
+    private javax.swing.JPanel panelBuscarDespesaData;
     private javax.swing.JPanel panelCadastrarDespesa;
     private javax.swing.JPanel panelCadastrarDespesaDados;
     private javax.swing.JPanel panelCadastrarDespesaData;
     private javax.swing.JPanel panelRemoverDespesaDados;
     private javax.swing.JPanel panelRemoverDespesaData;
     private javax.swing.JPanel panellRemoverDespesa;
+    private javax.swing.JSpinner spinnerBuscarDespesaAno;
+    private javax.swing.JSpinner spinnerBuscarDespesaDia;
+    private javax.swing.JSpinner spinnerBuscarDespesaMes;
     private javax.swing.JSpinner spinnerCadastrarDespesaAno;
     private javax.swing.JSpinner spinnerCadastrarDespesaDia;
     private javax.swing.JSpinner spinnerCadastrarDespesaMes;

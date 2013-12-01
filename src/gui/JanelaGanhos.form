@@ -31,7 +31,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="mainTabbedPane" alignment="0" max="32767" attributes="0"/>
+          <Component id="mainTabbedPane" alignment="0" pref="265" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -40,7 +40,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="panelCadastrarDespesa">
+        <Container class="javax.swing.JPanel" name="panelCadastrarGanho">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Cadastrar">
@@ -63,12 +63,12 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="labelCadastrarGanhoAviso" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonCadastroGanhoLimpar" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonCadastroGanhoCancelar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonCadastroGanhoAdicionar" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -81,17 +81,17 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelCadastrarGanhoAviso" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonCadastroGanhoLimpar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace pref="17" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="panelCadastroGanhoData" min="-2" max="-2" attributes="0"/>
                           <Component id="panelCadastroGanhoDados" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonCadastroGanhoAdicionar" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonCadastroGanhoCancelar" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -126,15 +126,17 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelDia" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelMes" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelAno" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastroGanhoDataDia" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastroGanhoDataMes" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastroGanhoDataAno" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="22" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSpinner2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinnerCadastroGanhoDataAno" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="spinnerCadastroGanhoDataDia" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="spinnerCadastroGanhoDataMes" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -145,18 +147,18 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelDia" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastroGanhoDataDia" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinnerCadastroGanhoDataDia" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelMes" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastroGanhoDataMes" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinnerCadastroGanhoDataMes" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelAno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastroGanhoDataAno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinnerCadastroGanhoDataAno" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -164,12 +166,12 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelDia">
+                <Component class="javax.swing.JLabel" name="labelCadastroGanhoDataDia">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Dia:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="jSpinner1">
+                <Component class="javax.swing.JSpinner" name="spinnerCadastroGanhoDataDia">
                   <Properties>
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="31" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -177,17 +179,17 @@
                     <Property name="toolTipText" type="java.lang.String" value="Insira o dia componente da data."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelMes">
+                <Component class="javax.swing.JLabel" name="labelCadastroGanhoDataMes">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xea;s:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelAno">
+                <Component class="javax.swing.JLabel" name="labelCadastroGanhoDataAno">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ano:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="jSpinner2">
+                <Component class="javax.swing.JSpinner" name="spinnerCadastroGanhoDataMes">
                   <Properties>
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="12" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -195,7 +197,7 @@
                     <Property name="toolTipText" type="java.lang.String" value="Insira o m&#xea;s componente da data."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="jSpinner3">
+                <Component class="javax.swing.JSpinner" name="spinnerCadastroGanhoDataAno">
                   <Properties>
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="2000" maximum="2020" minimum="2000" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -224,14 +226,14 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelValor" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelDescrição" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastrarGanhoValor" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastrarGanhoDesc" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="fieldInputDescrição" max="32767" attributes="0"/>
+                              <Component id="fieldInputCadastrarGanhoDesc" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="formattedFieldInputValor" min="-2" pref="136" max="-2" attributes="0"/>
+                                  <Component id="fieldInputCadastrarGanhoValor" min="-2" pref="136" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -244,13 +246,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelDescrição" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldInputDescrição" alignment="3" max="32767" attributes="0"/>
+                              <Component id="labelCadastrarGanhoDesc" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldInputCadastrarGanhoDesc" alignment="3" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="formattedFieldInputValor" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelValor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldInputCadastrarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCadastrarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -258,29 +260,32 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelDescri&#xe7;&#xe3;o">
+                <Component class="javax.swing.JLabel" name="labelCadastrarGanhoDesc">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelValor">
+                <Component class="javax.swing.JLabel" name="labelCadastrarGanhoValor">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Valor:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="fieldInputDescri&#xe7;&#xe3;o">
+                <Component class="javax.swing.JTextField" name="fieldInputCadastrarGanhoDesc">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value="Insira uma descri&#xe7;&#xe3;o dos dados."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JFormattedTextField" name="formattedFieldInputValor">
+                <Component class="javax.swing.JFormattedTextField" name="fieldInputCadastrarGanhoValor">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value="Insira o valor dos dados."/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldInputCadastrarGanhoValorActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="buttonCadastroGanhoLimpar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/recursos/24px_limpar.png"/>
@@ -289,7 +294,7 @@
                 <Property name="toolTipText" type="java.lang.String" value="Limpar os campos da tela."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="buttonCadastroGanhoCancelar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/recursos/24px_cancelar.png"/>
@@ -298,7 +303,7 @@
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar o cadastro."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="buttonCadastroGanhoAdicionar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/recursos/24px_adicionar.png"/>
@@ -309,7 +314,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="paneRemoverDespesa">
+        <Container class="javax.swing.JPanel" name="paneRemoverGanho">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Remover">
@@ -326,7 +331,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="labelRemoverGanhoAviso" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="130" max="32767" attributes="0"/>
                               <Component id="buttonRemoverGanhoLimpar" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -352,12 +357,12 @@
                           <Component id="labelRemoverGanhoAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="buttonRemoverGanhoLimpar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="17" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="panelRemoverGanhoData" min="-2" max="-2" attributes="0"/>
                           <Component id="panelRemoverGanhoDados" min="-2" max="-2" attributes="0"/>
-                          <Component id="panelRemoverGanhoData" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="buttonRemoverGanhoRemover" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="buttonRemoverGanhoCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -395,8 +400,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="labelRemoverGanhoDesc" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="fieldInputRemoverGanhoDesc" pref="221" max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="fieldInputRemoverGanhoDesc" min="-2" pref="215" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -409,7 +414,7 @@
                               <Component id="labelRemoverGanhoDesc" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fieldInputRemoverGanhoDesc" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -446,17 +451,17 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelRemoverGanhoAno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelRemoverGanhoDia" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelRemoverGanhoMes" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRemoverGanhoDia" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRemoverGanhoMes" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRemoverGanhoAno" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="spinnerRemoverGanhoAno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="spinnerRemoverGanhoMes" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinnerRemoverGanhoAno" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinnerRemoverGanhoMes" min="-2" max="-2" attributes="0"/>
                               <Component id="spinnerRemoverGanhoDia" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -554,7 +559,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="paneBuscarDespesa">
+        <Container class="javax.swing.JPanel" name="paneBuscarGanho">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Buscar">
@@ -571,7 +576,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="232" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="237" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

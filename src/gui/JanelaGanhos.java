@@ -27,24 +27,24 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private void initComponents() {
 
         mainTabbedPane = new javax.swing.JTabbedPane();
-        panelCadastrarDespesa = new javax.swing.JPanel();
+        panelCadastrarGanho = new javax.swing.JPanel();
         labelCadastrarGanhoAviso = new javax.swing.JLabel();
         panelCadastroGanhoData = new javax.swing.JPanel();
-        labelDia = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        labelMes = new javax.swing.JLabel();
-        labelAno = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner3 = new javax.swing.JSpinner();
+        labelCadastroGanhoDataDia = new javax.swing.JLabel();
+        spinnerCadastroGanhoDataDia = new javax.swing.JSpinner();
+        labelCadastroGanhoDataMes = new javax.swing.JLabel();
+        labelCadastroGanhoDataAno = new javax.swing.JLabel();
+        spinnerCadastroGanhoDataMes = new javax.swing.JSpinner();
+        spinnerCadastroGanhoDataAno = new javax.swing.JSpinner();
         panelCadastroGanhoDados = new javax.swing.JPanel();
-        labelDescrição = new javax.swing.JLabel();
-        labelValor = new javax.swing.JLabel();
-        fieldInputDescrição = new javax.swing.JTextField();
-        formattedFieldInputValor = new javax.swing.JFormattedTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        paneRemoverDespesa = new javax.swing.JPanel();
+        labelCadastrarGanhoDesc = new javax.swing.JLabel();
+        labelCadastrarGanhoValor = new javax.swing.JLabel();
+        fieldInputCadastrarGanhoDesc = new javax.swing.JTextField();
+        fieldInputCadastrarGanhoValor = new javax.swing.JFormattedTextField();
+        buttonCadastroGanhoLimpar = new javax.swing.JButton();
+        buttonCadastroGanhoCancelar = new javax.swing.JButton();
+        buttonCadastroGanhoAdicionar = new javax.swing.JButton();
+        paneRemoverGanho = new javax.swing.JPanel();
         labelRemoverGanhoAviso = new javax.swing.JLabel();
         panelRemoverGanhoDados = new javax.swing.JPanel();
         labelRemoverGanhoDesc = new javax.swing.JLabel();
@@ -59,7 +59,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonRemoverGanhoLimpar = new javax.swing.JButton();
         buttonRemoverGanhoRemover = new javax.swing.JButton();
         buttonRemoverGanhoCancelar = new javax.swing.JButton();
-        paneBuscarDespesa = new javax.swing.JPanel();
+        paneBuscarGanho = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[SGF - 2014] Ganhos");
@@ -71,20 +71,20 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         panelCadastroGanhoData.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
 
-        labelDia.setText("Dia:");
+        labelCadastroGanhoDataDia.setText("Dia:");
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
-        jSpinner1.setToolTipText("Insira o dia componente da data.");
+        spinnerCadastroGanhoDataDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
+        spinnerCadastroGanhoDataDia.setToolTipText("Insira o dia componente da data.");
 
-        labelMes.setText("Mês:");
+        labelCadastroGanhoDataMes.setText("Mês:");
 
-        labelAno.setText("Ano:");
+        labelCadastroGanhoDataAno.setText("Ano:");
 
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
-        jSpinner2.setToolTipText("Insira o mês componente da data.");
+        spinnerCadastroGanhoDataMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        spinnerCadastroGanhoDataMes.setToolTipText("Insira o mês componente da data.");
 
-        jSpinner3.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
-        jSpinner3.setToolTipText("Insira o ano componente da data.");
+        spinnerCadastroGanhoDataAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
+        spinnerCadastroGanhoDataAno.setToolTipText("Insira o ano componente da data.");
 
         javax.swing.GroupLayout panelCadastroGanhoDataLayout = new javax.swing.GroupLayout(panelCadastroGanhoData);
         panelCadastroGanhoData.setLayout(panelCadastroGanhoDataLayout);
@@ -93,14 +93,15 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelCadastroGanhoDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDia, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelMes, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelAno, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(labelCadastroGanhoDataDia, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelCadastroGanhoDataMes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelCadastroGanhoDataAno, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spinnerCadastroGanhoDataAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(spinnerCadastroGanhoDataDia, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(spinnerCadastroGanhoDataMes, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap())
         );
         panelCadastroGanhoDataLayout.setVerticalGroup(
@@ -108,28 +109,33 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelCadastroGanhoDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelDia)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelCadastroGanhoDataDia)
+                    .addComponent(spinnerCadastroGanhoDataDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelMes)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelCadastroGanhoDataMes)
+                    .addComponent(spinnerCadastroGanhoDataMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAno)
-                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelCadastroGanhoDataAno)
+                    .addComponent(spinnerCadastroGanhoDataAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelCadastroGanhoDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
 
-        labelDescrição.setText("Descrição:");
+        labelCadastrarGanhoDesc.setText("Descrição:");
 
-        labelValor.setText("Valor:");
+        labelCadastrarGanhoValor.setText("Valor:");
 
-        fieldInputDescrição.setToolTipText("Insira uma descrição dos dados.");
+        fieldInputCadastrarGanhoDesc.setToolTipText("Insira uma descrição dos dados.");
 
-        formattedFieldInputValor.setToolTipText("Insira o valor dos dados.");
+        fieldInputCadastrarGanhoValor.setToolTipText("Insira o valor dos dados.");
+        fieldInputCadastrarGanhoValor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldInputCadastrarGanhoValorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelCadastroGanhoDadosLayout = new javax.swing.GroupLayout(panelCadastroGanhoDados);
         panelCadastroGanhoDados.setLayout(panelCadastroGanhoDadosLayout);
@@ -138,13 +144,13 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelValor, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelDescrição, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(labelCadastrarGanhoValor, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelCadastrarGanhoDesc, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldInputDescrição)
+                    .addComponent(fieldInputCadastrarGanhoDesc)
                     .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
-                        .addComponent(formattedFieldInputValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldInputCadastrarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 79, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -153,67 +159,67 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelDescrição)
-                    .addComponent(fieldInputDescrição))
+                    .addComponent(labelCadastrarGanhoDesc)
+                    .addComponent(fieldInputCadastrarGanhoDesc))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(formattedFieldInputValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelValor))
+                    .addComponent(fieldInputCadastrarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCadastrarGanhoValor))
                 .addContainerGap())
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
-        jButton1.setText("Limpar");
-        jButton1.setToolTipText("Limpar os campos da tela.");
+        buttonCadastroGanhoLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
+        buttonCadastroGanhoLimpar.setText("Limpar");
+        buttonCadastroGanhoLimpar.setToolTipText("Limpar os campos da tela.");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
-        jButton2.setText("Cancelar");
-        jButton2.setToolTipText("Cancelar o cadastro.");
+        buttonCadastroGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        buttonCadastroGanhoCancelar.setText("Cancelar");
+        buttonCadastroGanhoCancelar.setToolTipText("Cancelar o cadastro.");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
-        jButton3.setText("Adicionar");
-        jButton3.setToolTipText("Cadastrar o ganho no banco de dados.");
+        buttonCadastroGanhoAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
+        buttonCadastroGanhoAdicionar.setText("Adicionar");
+        buttonCadastroGanhoAdicionar.setToolTipText("Cadastrar o ganho no banco de dados.");
 
-        javax.swing.GroupLayout panelCadastrarDespesaLayout = new javax.swing.GroupLayout(panelCadastrarDespesa);
-        panelCadastrarDespesa.setLayout(panelCadastrarDespesaLayout);
-        panelCadastrarDespesaLayout.setHorizontalGroup(
-            panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCadastrarDespesaLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelCadastrarGanhoLayout = new javax.swing.GroupLayout(panelCadastrarGanho);
+        panelCadastrarGanho.setLayout(panelCadastrarGanhoLayout);
+        panelCadastrarGanhoLayout.setHorizontalGroup(
+            panelCadastrarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCadastrarGanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
+                .addGroup(panelCadastrarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarGanhoLayout.createSequentialGroup()
                         .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarGanhoLayout.createSequentialGroup()
                         .addComponent(labelCadastrarGanhoAviso)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarDespesaLayout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(buttonCadastroGanhoLimpar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastrarGanhoLayout.createSequentialGroup()
+                        .addComponent(buttonCadastroGanhoCancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)))
+                        .addComponent(buttonCadastroGanhoAdicionar)))
                 .addContainerGap())
         );
-        panelCadastrarDespesaLayout.setVerticalGroup(
-            panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCadastrarDespesaLayout.createSequentialGroup()
+        panelCadastrarGanhoLayout.setVerticalGroup(
+            panelCadastrarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCadastrarGanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelCadastrarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCadastrarGanhoAviso)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonCadastroGanhoLimpar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(panelCadastrarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelCadastroGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelCadastroGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelCadastrarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                .addGroup(panelCadastrarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonCadastroGanhoAdicionar)
+                    .addComponent(buttonCadastroGanhoCancelar))
                 .addContainerGap())
         );
 
-        mainTabbedPane.addTab("Cadastrar", panelCadastrarDespesa);
+        mainTabbedPane.addTab("Cadastrar", panelCadastrarGanho);
 
         labelRemoverGanhoAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelRemoverGanhoAviso.setText("Insira os dados do ganho a ser removido:");
@@ -231,8 +237,8 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelRemoverGanhoDadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelRemoverGanhoDesc)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldInputRemoverGanhoDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(fieldInputRemoverGanhoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         panelRemoverGanhoDadosLayout.setVerticalGroup(
@@ -242,7 +248,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
                 .addGroup(panelRemoverGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverGanhoDesc)
                     .addComponent(fieldInputRemoverGanhoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelRemoverGanhoData.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
@@ -269,15 +275,15 @@ public class JanelaGanhos extends javax.swing.JFrame {
             .addGroup(panelRemoverGanhoDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelRemoverGanhoAno)
-                    .addComponent(labelRemoverGanhoDia)
-                    .addComponent(labelRemoverGanhoMes))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(labelRemoverGanhoDia, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelRemoverGanhoMes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelRemoverGanhoAno, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(spinnerRemoverGanhoAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(spinnerRemoverGanhoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(spinnerRemoverGanhoDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap())
         );
         panelRemoverGanhoDataLayout.setVerticalGroup(
             panelRemoverGanhoDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,59 +315,59 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonRemoverGanhoCancelar.setText("Cancelar");
         buttonRemoverGanhoCancelar.setToolTipText("Cancelar remoção de ganho.");
 
-        javax.swing.GroupLayout paneRemoverDespesaLayout = new javax.swing.GroupLayout(paneRemoverDespesa);
-        paneRemoverDespesa.setLayout(paneRemoverDespesaLayout);
-        paneRemoverDespesaLayout.setHorizontalGroup(
-            paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+        javax.swing.GroupLayout paneRemoverGanhoLayout = new javax.swing.GroupLayout(paneRemoverGanho);
+        paneRemoverGanho.setLayout(paneRemoverGanhoLayout);
+        paneRemoverGanhoLayout.setHorizontalGroup(
+            paneRemoverGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneRemoverGanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+                .addGroup(paneRemoverGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneRemoverGanhoLayout.createSequentialGroup()
                         .addComponent(labelRemoverGanhoAviso)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
                         .addComponent(buttonRemoverGanhoLimpar))
-                    .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+                    .addGroup(paneRemoverGanhoLayout.createSequentialGroup()
                         .addComponent(panelRemoverGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelRemoverGanhoData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneRemoverDespesaLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneRemoverGanhoLayout.createSequentialGroup()
                         .addComponent(buttonRemoverGanhoCancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(buttonRemoverGanhoRemover)))
                 .addContainerGap())
         );
-        paneRemoverDespesaLayout.setVerticalGroup(
-            paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paneRemoverDespesaLayout.createSequentialGroup()
+        paneRemoverGanhoLayout.setVerticalGroup(
+            paneRemoverGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneRemoverGanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRemoverGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverGanhoAviso)
                     .addComponent(buttonRemoverGanhoLimpar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(paneRemoverGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelRemoverGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelRemoverGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelRemoverGanhoDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelRemoverGanhoData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addGroup(paneRemoverDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRemoverGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonRemoverGanhoRemover)
                     .addComponent(buttonRemoverGanhoCancelar))
                 .addContainerGap())
         );
 
-        mainTabbedPane.addTab("Remover", paneRemoverDespesa);
+        mainTabbedPane.addTab("Remover", paneRemoverGanho);
 
-        javax.swing.GroupLayout paneBuscarDespesaLayout = new javax.swing.GroupLayout(paneBuscarDespesa);
-        paneBuscarDespesa.setLayout(paneBuscarDespesaLayout);
-        paneBuscarDespesaLayout.setHorizontalGroup(
-            paneBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout paneBuscarGanhoLayout = new javax.swing.GroupLayout(paneBuscarGanho);
+        paneBuscarGanho.setLayout(paneBuscarGanhoLayout);
+        paneBuscarGanhoLayout.setHorizontalGroup(
+            paneBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 473, Short.MAX_VALUE)
         );
-        paneBuscarDespesaLayout.setVerticalGroup(
-            paneBuscarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 232, Short.MAX_VALUE)
+        paneBuscarGanhoLayout.setVerticalGroup(
+            paneBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 237, Short.MAX_VALUE)
         );
 
-        mainTabbedPane.addTab("Buscar", paneBuscarDespesa);
+        mainTabbedPane.addTab("Buscar", paneBuscarGanho);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -371,11 +377,15 @@ public class JanelaGanhos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTabbedPane)
+            .addComponent(mainTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void fieldInputCadastrarGanhoValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputCadastrarGanhoValorActionPerformed
+        
+    }//GEN-LAST:event_fieldInputCadastrarGanhoValorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -412,37 +422,37 @@ public class JanelaGanhos extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonCadastroGanhoAdicionar;
+    private javax.swing.JButton buttonCadastroGanhoCancelar;
+    private javax.swing.JButton buttonCadastroGanhoLimpar;
     private javax.swing.JButton buttonRemoverGanhoCancelar;
     private javax.swing.JButton buttonRemoverGanhoLimpar;
     private javax.swing.JButton buttonRemoverGanhoRemover;
-    private javax.swing.JTextField fieldInputDescrição;
+    private javax.swing.JTextField fieldInputCadastrarGanhoDesc;
+    private javax.swing.JFormattedTextField fieldInputCadastrarGanhoValor;
     private javax.swing.JTextField fieldInputRemoverGanhoDesc;
-    private javax.swing.JFormattedTextField formattedFieldInputValor;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JLabel labelAno;
     private javax.swing.JLabel labelCadastrarGanhoAviso;
-    private javax.swing.JLabel labelDescrição;
-    private javax.swing.JLabel labelDia;
-    private javax.swing.JLabel labelMes;
+    private javax.swing.JLabel labelCadastrarGanhoDesc;
+    private javax.swing.JLabel labelCadastrarGanhoValor;
+    private javax.swing.JLabel labelCadastroGanhoDataAno;
+    private javax.swing.JLabel labelCadastroGanhoDataDia;
+    private javax.swing.JLabel labelCadastroGanhoDataMes;
     private javax.swing.JLabel labelRemoverGanhoAno;
     private javax.swing.JLabel labelRemoverGanhoAviso;
     private javax.swing.JLabel labelRemoverGanhoDesc;
     private javax.swing.JLabel labelRemoverGanhoDia;
     private javax.swing.JLabel labelRemoverGanhoMes;
-    private javax.swing.JLabel labelValor;
     private javax.swing.JTabbedPane mainTabbedPane;
-    private javax.swing.JPanel paneBuscarDespesa;
-    private javax.swing.JPanel paneRemoverDespesa;
-    private javax.swing.JPanel panelCadastrarDespesa;
+    private javax.swing.JPanel paneBuscarGanho;
+    private javax.swing.JPanel paneRemoverGanho;
+    private javax.swing.JPanel panelCadastrarGanho;
     private javax.swing.JPanel panelCadastroGanhoDados;
     private javax.swing.JPanel panelCadastroGanhoData;
     private javax.swing.JPanel panelRemoverGanhoDados;
     private javax.swing.JPanel panelRemoverGanhoData;
+    private javax.swing.JSpinner spinnerCadastroGanhoDataAno;
+    private javax.swing.JSpinner spinnerCadastroGanhoDataDia;
+    private javax.swing.JSpinner spinnerCadastroGanhoDataMes;
     private javax.swing.JSpinner spinnerRemoverGanhoAno;
     private javax.swing.JSpinner spinnerRemoverGanhoDia;
     private javax.swing.JSpinner spinnerRemoverGanhoMes;
