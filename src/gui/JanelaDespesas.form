@@ -820,7 +820,7 @@
                   <Image iconType="3" name="/recursos/24px_buscar.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Buscar"/>
-                <Property name="toolTipText" type="java.lang.String" value="Cadastrar a despesa no banco de dados."/>
+                <Property name="toolTipText" type="java.lang.String" value="Buscar despesa no banco de dados."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="buttonBuscarDespesaCancelar">
@@ -829,7 +829,7 @@
                   <Image iconType="3" name="/recursos/24px_cancelar.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
-                <Property name="toolTipText" type="java.lang.String" value="Cancelar o cadastro."/>
+                <Property name="toolTipText" type="java.lang.String" value="Cancelar a busca."/>
               </Properties>
             </Component>
           </SubComponents>

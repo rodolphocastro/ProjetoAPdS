@@ -59,7 +59,23 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonRemoverGanhoLimpar = new javax.swing.JButton();
         buttonRemoverGanhoRemover = new javax.swing.JButton();
         buttonRemoverGanhoCancelar = new javax.swing.JButton();
-        paneBuscarGanho = new javax.swing.JPanel();
+        panelBuscarGanho = new javax.swing.JPanel();
+        labelCadastrarGanhoAviso1 = new javax.swing.JLabel();
+        panelCadastroGanhoData1 = new javax.swing.JPanel();
+        labelBuscarGanhoDataDia = new javax.swing.JLabel();
+        spinnerBuscarGanhoDataDia = new javax.swing.JSpinner();
+        labelBuscarGanhoDataMes = new javax.swing.JLabel();
+        labelBuscarGanhoDataAno = new javax.swing.JLabel();
+        spinnerBuscarGanhoDataMes = new javax.swing.JSpinner();
+        spinnerBuscarGanhoDataAno = new javax.swing.JSpinner();
+        panelCadastroGanhoDados1 = new javax.swing.JPanel();
+        labelBuscarGanhoDesc = new javax.swing.JLabel();
+        labelBuscarGanhoValor = new javax.swing.JLabel();
+        fieldInputBuscarGanhoDesc = new javax.swing.JTextField();
+        fieldInputBuscarGanhoValor = new javax.swing.JFormattedTextField();
+        buttonBuscarGanhoLimpar = new javax.swing.JButton();
+        buttonBuscarGanhoCancelar = new javax.swing.JButton();
+        buttonBuscarGanhoBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[SGF - 2014] Ganhos");
@@ -356,18 +372,160 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         mainTabbedPane.addTab("Remover", paneRemoverGanho);
 
-        javax.swing.GroupLayout paneBuscarGanhoLayout = new javax.swing.GroupLayout(paneBuscarGanho);
-        paneBuscarGanho.setLayout(paneBuscarGanhoLayout);
-        paneBuscarGanhoLayout.setHorizontalGroup(
-            paneBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+        labelCadastrarGanhoAviso1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelCadastrarGanhoAviso1.setText("Insira os dados do ganho a ser buscado:");
+
+        panelCadastroGanhoData1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Data"));
+
+        labelBuscarGanhoDataDia.setText("Dia:");
+
+        spinnerBuscarGanhoDataDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
+        spinnerBuscarGanhoDataDia.setToolTipText("Insira o dia componente da data.");
+
+        labelBuscarGanhoDataMes.setText("Mês:");
+
+        labelBuscarGanhoDataAno.setText("Ano:");
+
+        spinnerBuscarGanhoDataMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        spinnerBuscarGanhoDataMes.setToolTipText("Insira o mês componente da data.");
+
+        spinnerBuscarGanhoDataAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
+        spinnerBuscarGanhoDataAno.setToolTipText("Insira o ano componente da data.");
+
+        javax.swing.GroupLayout panelCadastroGanhoData1Layout = new javax.swing.GroupLayout(panelCadastroGanhoData1);
+        panelCadastroGanhoData1.setLayout(panelCadastroGanhoData1Layout);
+        panelCadastroGanhoData1Layout.setHorizontalGroup(
+            panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCadastroGanhoData1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelBuscarGanhoDataDia, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBuscarGanhoDataMes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBuscarGanhoDataAno, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGroup(panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spinnerBuscarGanhoDataAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(spinnerBuscarGanhoDataDia, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(spinnerBuscarGanhoDataMes, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addContainerGap())
         );
-        paneBuscarGanhoLayout.setVerticalGroup(
-            paneBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 237, Short.MAX_VALUE)
+        panelCadastroGanhoData1Layout.setVerticalGroup(
+            panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCadastroGanhoData1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarGanhoDataDia)
+                    .addComponent(spinnerBuscarGanhoDataDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarGanhoDataMes)
+                    .addComponent(spinnerBuscarGanhoDataMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelCadastroGanhoData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarGanhoDataAno)
+                    .addComponent(spinnerBuscarGanhoDataAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        mainTabbedPane.addTab("Buscar", paneBuscarGanho);
+        panelCadastroGanhoDados1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
+
+        labelBuscarGanhoDesc.setText("Descrição:");
+
+        labelBuscarGanhoValor.setText("Valor:");
+
+        fieldInputBuscarGanhoDesc.setToolTipText("Insira uma descrição dos dados.");
+
+        fieldInputBuscarGanhoValor.setToolTipText("Insira o valor dos dados.");
+        fieldInputBuscarGanhoValor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldInputBuscarGanhoValorActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelCadastroGanhoDados1Layout = new javax.swing.GroupLayout(panelCadastroGanhoDados1);
+        panelCadastroGanhoDados1.setLayout(panelCadastroGanhoDados1Layout);
+        panelCadastroGanhoDados1Layout.setHorizontalGroup(
+            panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCadastroGanhoDados1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelBuscarGanhoValor, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBuscarGanhoDesc, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldInputBuscarGanhoDesc)
+                    .addGroup(panelCadastroGanhoDados1Layout.createSequentialGroup()
+                        .addComponent(fieldInputBuscarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 79, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        panelCadastroGanhoDados1Layout.setVerticalGroup(
+            panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCadastroGanhoDados1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelBuscarGanhoDesc)
+                    .addComponent(fieldInputBuscarGanhoDesc))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldInputBuscarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelBuscarGanhoValor))
+                .addContainerGap())
+        );
+
+        buttonBuscarGanhoLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
+        buttonBuscarGanhoLimpar.setText("Limpar");
+        buttonBuscarGanhoLimpar.setToolTipText("Limpar os campos da tela.");
+
+        buttonBuscarGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        buttonBuscarGanhoCancelar.setText("Cancelar");
+        buttonBuscarGanhoCancelar.setToolTipText("Cancelar a busca.");
+
+        buttonBuscarGanhoBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
+        buttonBuscarGanhoBuscar.setText("Buscar");
+        buttonBuscarGanhoBuscar.setToolTipText("Buscar ganho no banco de dados.");
+
+        javax.swing.GroupLayout panelBuscarGanhoLayout = new javax.swing.GroupLayout(panelBuscarGanho);
+        panelBuscarGanho.setLayout(panelBuscarGanhoLayout);
+        panelBuscarGanhoLayout.setHorizontalGroup(
+            panelBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarGanhoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarGanhoLayout.createSequentialGroup()
+                        .addComponent(panelCadastroGanhoDados1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelCadastroGanhoData1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarGanhoLayout.createSequentialGroup()
+                        .addComponent(labelCadastrarGanhoAviso1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonBuscarGanhoLimpar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarGanhoLayout.createSequentialGroup()
+                        .addComponent(buttonBuscarGanhoCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonBuscarGanhoBuscar)))
+                .addContainerGap())
+        );
+        panelBuscarGanhoLayout.setVerticalGroup(
+            panelBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarGanhoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCadastrarGanhoAviso1)
+                    .addComponent(buttonBuscarGanhoLimpar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(panelBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelCadastroGanhoData1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelCadastroGanhoDados1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBuscarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonBuscarGanhoBuscar)
+                    .addComponent(buttonBuscarGanhoCancelar))
+                .addContainerGap())
+        );
+
+        mainTabbedPane.addTab("Buscar", panelBuscarGanho);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -377,7 +535,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+            .addComponent(mainTabbedPane)
         );
 
         pack();
@@ -386,6 +544,10 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private void fieldInputCadastrarGanhoValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputCadastrarGanhoValorActionPerformed
         
     }//GEN-LAST:event_fieldInputCadastrarGanhoValorActionPerformed
+
+    private void fieldInputBuscarGanhoValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputBuscarGanhoValorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldInputBuscarGanhoValorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -422,16 +584,27 @@ public class JanelaGanhos extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonBuscarGanhoBuscar;
+    private javax.swing.JButton buttonBuscarGanhoCancelar;
+    private javax.swing.JButton buttonBuscarGanhoLimpar;
     private javax.swing.JButton buttonCadastroGanhoAdicionar;
     private javax.swing.JButton buttonCadastroGanhoCancelar;
     private javax.swing.JButton buttonCadastroGanhoLimpar;
     private javax.swing.JButton buttonRemoverGanhoCancelar;
     private javax.swing.JButton buttonRemoverGanhoLimpar;
     private javax.swing.JButton buttonRemoverGanhoRemover;
+    private javax.swing.JTextField fieldInputBuscarGanhoDesc;
+    private javax.swing.JFormattedTextField fieldInputBuscarGanhoValor;
     private javax.swing.JTextField fieldInputCadastrarGanhoDesc;
     private javax.swing.JFormattedTextField fieldInputCadastrarGanhoValor;
     private javax.swing.JTextField fieldInputRemoverGanhoDesc;
+    private javax.swing.JLabel labelBuscarGanhoDataAno;
+    private javax.swing.JLabel labelBuscarGanhoDataDia;
+    private javax.swing.JLabel labelBuscarGanhoDataMes;
+    private javax.swing.JLabel labelBuscarGanhoDesc;
+    private javax.swing.JLabel labelBuscarGanhoValor;
     private javax.swing.JLabel labelCadastrarGanhoAviso;
+    private javax.swing.JLabel labelCadastrarGanhoAviso1;
     private javax.swing.JLabel labelCadastrarGanhoDesc;
     private javax.swing.JLabel labelCadastrarGanhoValor;
     private javax.swing.JLabel labelCadastroGanhoDataAno;
@@ -443,13 +616,18 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private javax.swing.JLabel labelRemoverGanhoDia;
     private javax.swing.JLabel labelRemoverGanhoMes;
     private javax.swing.JTabbedPane mainTabbedPane;
-    private javax.swing.JPanel paneBuscarGanho;
     private javax.swing.JPanel paneRemoverGanho;
+    private javax.swing.JPanel panelBuscarGanho;
     private javax.swing.JPanel panelCadastrarGanho;
     private javax.swing.JPanel panelCadastroGanhoDados;
+    private javax.swing.JPanel panelCadastroGanhoDados1;
     private javax.swing.JPanel panelCadastroGanhoData;
+    private javax.swing.JPanel panelCadastroGanhoData1;
     private javax.swing.JPanel panelRemoverGanhoDados;
     private javax.swing.JPanel panelRemoverGanhoData;
+    private javax.swing.JSpinner spinnerBuscarGanhoDataAno;
+    private javax.swing.JSpinner spinnerBuscarGanhoDataDia;
+    private javax.swing.JSpinner spinnerBuscarGanhoDataMes;
     private javax.swing.JSpinner spinnerCadastroGanhoDataAno;
     private javax.swing.JSpinner spinnerCadastroGanhoDataDia;
     private javax.swing.JSpinner spinnerCadastroGanhoDataMes;

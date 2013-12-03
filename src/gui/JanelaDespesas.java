@@ -470,11 +470,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         buttonBuscarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
         buttonBuscarDespesaAdicionar.setText("Buscar");
-        buttonBuscarDespesaAdicionar.setToolTipText("Cadastrar a despesa no banco de dados.");
+        buttonBuscarDespesaAdicionar.setToolTipText("Buscar despesa no banco de dados.");
 
         buttonBuscarDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonBuscarDespesaCancelar.setText("Cancelar");
-        buttonBuscarDespesaCancelar.setToolTipText("Cancelar o cadastro.");
+        buttonBuscarDespesaCancelar.setToolTipText("Cancelar a busca.");
 
         javax.swing.GroupLayout panelBuscarDespesaLayout = new javax.swing.GroupLayout(panelBuscarDespesa);
         panelBuscarDespesa.setLayout(panelBuscarDespesaLayout);
