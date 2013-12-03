@@ -242,7 +242,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         labelRemoverDespesaDesc.setText("Descrição:");
 
-        fieldInputRemoverDespesaDesc.setToolTipText("Uma breve descrição da despesa a ser cadastrada.");
+        fieldInputRemoverDespesaDesc.setToolTipText("A descrição da despesa a ser removida.");
 
         javax.swing.GroupLayout panelRemoverDespesaDadosLayout = new javax.swing.GroupLayout(panelRemoverDespesaDados);
         panelRemoverDespesaDados.setLayout(panelRemoverDespesaDadosLayout);
@@ -322,9 +322,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         buttonRemoverDespesaRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_delete.png"))); // NOI18N
         buttonRemoverDespesaRemover.setText("Remover");
+        buttonRemoverDespesaRemover.setToolTipText("Remover o ganho.");
 
         buttonRemoverDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonRemoverDespesaCancelar.setText("Cancelar");
+        buttonRemoverDespesaCancelar.setToolTipText("Cancelar a remoção.");
 
         javax.swing.GroupLayout panellRemoverDespesaLayout = new javax.swing.GroupLayout(panellRemoverDespesa);
         panellRemoverDespesa.setLayout(panellRemoverDespesaLayout);
@@ -377,11 +379,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         labelBuscarDespesaValor.setText("Valor:");
 
-        fieldInputBuscarDespesaDesc.setToolTipText("Uma breve descrição da despesa a ser cadastrada.");
+        fieldInputBuscarDespesaDesc.setToolTipText("A descrição da despesa a ser buscada.");
 
         fieldInputBuscarDespesaValor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         fieldInputBuscarDespesaValor.setText("R$ 1.000,00");
-        fieldInputBuscarDespesaValor.setToolTipText("O valor da despesa.");
+        fieldInputBuscarDespesaValor.setToolTipText("O valor da despesa a ser buscada.");
 
         javax.swing.GroupLayout panelBuscarDespesaDadosLayout = new javax.swing.GroupLayout(panelBuscarDespesaDados);
         panelBuscarDespesaDados.setLayout(panelBuscarDespesaDadosLayout);
