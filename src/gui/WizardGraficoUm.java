@@ -29,103 +29,110 @@ public class WizardGraficoUm extends javax.swing.JFrame {
     private void initComponents() {
 
         labelIntro = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        labelAviso = new javax.swing.JLabel();
+        panelDados = new javax.swing.JPanel();
+        checkBoxGanhos = new javax.swing.JCheckBox();
+        checkBoxDespesas = new javax.swing.JCheckBox();
+        panelOpcional = new javax.swing.JPanel();
+        checkBoxEspecifica = new javax.swing.JCheckBox();
+        labelDesc = new javax.swing.JLabel();
+        fieldInputDesc = new javax.swing.JTextField();
+        butttonCancelar = new javax.swing.JButton();
+        buttonProximo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("[SGF - 2014] Gerar Gráfico (1 / 2)");
 
         labelIntro.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelIntro.setText("Seja bem vindo ao Wizard para a criação do gráfico.");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setText("Escolha abaixo os dados a serem exibidos:");
+        labelAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelAviso.setText("Escolha abaixo os dados a serem exibidos:");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
+        panelDados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Dados"));
 
-        jCheckBox1.setText("Ganhos");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        checkBoxGanhos.setText("Ganhos");
+        checkBoxGanhos.setToolTipText("Selecione para exibir Ganhos no gráfico.");
+        checkBoxGanhos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                checkBoxGanhosActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Despesas");
+        checkBoxDespesas.setText("Despesas");
+        checkBoxDespesas.setToolTipText("Selecione para exibir Despesas no gráfico.");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelDadosLayout = new javax.swing.GroupLayout(panelDados);
+        panelDados.setLayout(panelDadosLayout);
+        panelDadosLayout.setHorizontalGroup(
+            panelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox1))
+                .addGroup(panelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(checkBoxDespesas)
+                    .addComponent(checkBoxGanhos))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        panelDadosLayout.setVerticalGroup(
+            panelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jCheckBox1)
+                .addComponent(checkBoxGanhos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(checkBoxDespesas)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
-        jButton1.setText("Cancelar");
+        panelOpcional.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Opcional"));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_next.png"))); // NOI18N
-        jButton2.setText("Próximo");
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Opcional"));
-
-        jCheckBox3.setText("Específica");
-        jCheckBox3.addChangeListener(new javax.swing.event.ChangeListener() {
+        checkBoxEspecifica.setText("Específica");
+        checkBoxEspecifica.setToolTipText("Selecione caso deseje exibir no gráfico apenas despesas específicas.");
+        checkBoxEspecifica.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jCheckBox3StateChanged(evt);
+                checkBoxEspecificaStateChanged(evt);
             }
         });
 
-        jLabel2.setText("Descrição:");
+        labelDesc.setText("Descrição:");
 
-        jTextField1.setEditable(false);
+        fieldInputDesc.setEditable(false);
+        fieldInputDesc.setToolTipText("Descrição específica a ser exibida.");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelOpcionalLayout = new javax.swing.GroupLayout(panelOpcional);
+        panelOpcional.setLayout(panelOpcionalLayout);
+        panelOpcionalLayout.setHorizontalGroup(
+            panelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelOpcionalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jCheckBox3)
+                .addGroup(panelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelOpcionalLayout.createSequentialGroup()
+                        .addComponent(checkBoxEspecifica)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                    .addGroup(panelOpcionalLayout.createSequentialGroup()
+                        .addComponent(labelDesc)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1)))
+                        .addComponent(fieldInputDesc)))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        panelOpcionalLayout.setVerticalGroup(
+            panelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelOpcionalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jCheckBox3)
+                .addComponent(checkBoxEspecifica)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelDesc)
+                    .addComponent(fieldInputDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        butttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
+        butttonCancelar.setText("Cancelar");
+        butttonCancelar.setToolTipText("Cancelar a criação do gráfico.");
+
+        buttonProximo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_next.png"))); // NOI18N
+        buttonProximo.setText("Próximo");
+        buttonProximo.setToolTipText("Ir para o próximo passo na criação do gráfico.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,18 +142,18 @@ public class WizardGraficoUm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(butttonCancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2))
+                        .addComponent(buttonProximo))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelIntro)
-                            .addComponent(jLabel1))
+                            .addComponent(labelAviso))
                         .addGap(0, 64, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(panelOpcional, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -155,28 +162,28 @@ public class WizardGraficoUm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(labelIntro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(labelAviso)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelOpcional, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(butttonCancelar)
+                    .addComponent(buttonProximo))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void checkBoxGanhosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxGanhosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_checkBoxGanhosActionPerformed
 
-    private void jCheckBox3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox3StateChanged
+    private void checkBoxEspecificaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_checkBoxEspecificaStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3StateChanged
+    }//GEN-LAST:event_checkBoxEspecificaStateChanged
 
     /**
      * @param args the command line arguments
@@ -214,16 +221,16 @@ public class WizardGraficoUm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton buttonProximo;
+    private javax.swing.JButton butttonCancelar;
+    private javax.swing.JCheckBox checkBoxDespesas;
+    private javax.swing.JCheckBox checkBoxEspecifica;
+    private javax.swing.JCheckBox checkBoxGanhos;
+    private javax.swing.JTextField fieldInputDesc;
+    private javax.swing.JLabel labelAviso;
+    private javax.swing.JLabel labelDesc;
     private javax.swing.JLabel labelIntro;
+    private javax.swing.JPanel panelDados;
+    private javax.swing.JPanel panelOpcional;
     // End of variables declaration//GEN-END:variables
 }
