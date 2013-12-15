@@ -6,7 +6,7 @@ package controle;
  */
 public class ErrorHandler implements Errors{
     
-    public static String gerarRelatório(Exception err, int codErro){
+    public static String gerarRelatorio(Exception err, int codErro){
         String report = "";
         //Pegando dados do sistema
         report = report.concat("Sistema Operacional: " + Commons.OS + "\n");
