@@ -1,6 +1,7 @@
 package projetoapds;
 
 import controle.Controle;
+import gui.JanelaInicial;
 
 /**
  * Classe de entrada para o software
@@ -12,5 +13,8 @@ public class ProjetoAPdS {
         Controle core = new Controle();
         //Rotina de testes
         core.executarRotinaDeTestes();
+        
+        JanelaInicial janelaInicial = new JanelaInicial();
+        janelaInicial.setVisible(true);
     }
 }
