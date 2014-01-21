@@ -90,17 +90,17 @@ public class JanelaGanhos extends javax.swing.JFrame {
         labelCadastroGanhoDataDia.setText("Dia:");
 
         spinnerCadastroGanhoDataDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
-        spinnerCadastroGanhoDataDia.setToolTipText("Insira o dia componente da data.");
+        spinnerCadastroGanhoDataDia.setToolTipText("O dia em que o ganho ocorreu.");
 
         labelCadastroGanhoDataMes.setText("Mês:");
 
         labelCadastroGanhoDataAno.setText("Ano:");
 
         spinnerCadastroGanhoDataMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
-        spinnerCadastroGanhoDataMes.setToolTipText("Insira o mês componente da data.");
+        spinnerCadastroGanhoDataMes.setToolTipText("O mês em que o ganho ocorreu.");
 
         spinnerCadastroGanhoDataAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
-        spinnerCadastroGanhoDataAno.setToolTipText("Insira o ano componente da data.");
+        spinnerCadastroGanhoDataAno.setToolTipText("O ano em que o ganho ocorreu.");
 
         javax.swing.GroupLayout panelCadastroGanhoDataLayout = new javax.swing.GroupLayout(panelCadastroGanhoData);
         panelCadastroGanhoData.setLayout(panelCadastroGanhoDataLayout);
@@ -144,9 +144,10 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         labelCadastrarGanhoValor.setText("Valor:");
 
-        fieldInputCadastrarGanhoDesc.setToolTipText("Insira uma descrição dos dados.");
+        fieldInputCadastrarGanhoDesc.setToolTipText("Uma breve descrição do ganho a ser cadastrado.");
 
-        fieldInputCadastrarGanhoValor.setToolTipText("Insira o valor dos dados.");
+        fieldInputCadastrarGanhoValor.setText("R$ 1.000,00");
+        fieldInputCadastrarGanhoValor.setToolTipText("O valor do ganho.");
         fieldInputCadastrarGanhoValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldInputCadastrarGanhoValorActionPerformed(evt);
@@ -244,7 +245,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         labelRemoverGanhoDesc.setText("Descrição:");
 
-        fieldInputRemoverGanhoDesc.setToolTipText("Insira uma descrição dos dados.");
+        fieldInputRemoverGanhoDesc.setToolTipText("A descrição do ganho a ser removido.");
 
         javax.swing.GroupLayout panelRemoverGanhoDadosLayout = new javax.swing.GroupLayout(panelRemoverGanhoDados);
         panelRemoverGanhoDados.setLayout(panelRemoverGanhoDadosLayout);
@@ -276,13 +277,13 @@ public class JanelaGanhos extends javax.swing.JFrame {
         labelRemoverGanhoAno.setText("Ano:");
 
         spinnerRemoverGanhoDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
-        spinnerRemoverGanhoDia.setToolTipText("Insira o dia componente da data.");
+        spinnerRemoverGanhoDia.setToolTipText("O dia em que o ganho ocorreu.");
 
         spinnerRemoverGanhoMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
-        spinnerRemoverGanhoMes.setToolTipText("Insira o mês componente da data.");
+        spinnerRemoverGanhoMes.setToolTipText("O mês em que o ganho ocorreu.");
 
         spinnerRemoverGanhoAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
-        spinnerRemoverGanhoAno.setToolTipText("Insira o ano componente da data.");
+        spinnerRemoverGanhoAno.setToolTipText("O ano em que o ganho ocorreu.");
 
         javax.swing.GroupLayout panelRemoverGanhoDataLayout = new javax.swing.GroupLayout(panelRemoverGanhoData);
         panelRemoverGanhoData.setLayout(panelRemoverGanhoDataLayout);
@@ -380,17 +381,17 @@ public class JanelaGanhos extends javax.swing.JFrame {
         labelBuscarGanhoDataDia.setText("Dia:");
 
         spinnerBuscarGanhoDataDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
-        spinnerBuscarGanhoDataDia.setToolTipText("Insira o dia componente da data.");
+        spinnerBuscarGanhoDataDia.setToolTipText("O dia em que o ganho ocorreu.");
 
         labelBuscarGanhoDataMes.setText("Mês:");
 
         labelBuscarGanhoDataAno.setText("Ano:");
 
         spinnerBuscarGanhoDataMes.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
-        spinnerBuscarGanhoDataMes.setToolTipText("Insira o mês componente da data.");
+        spinnerBuscarGanhoDataMes.setToolTipText("O mês em que o ganho ocorreu.");
 
         spinnerBuscarGanhoDataAno.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, 2020, 1));
-        spinnerBuscarGanhoDataAno.setToolTipText("Insira o ano componente da data.");
+        spinnerBuscarGanhoDataAno.setToolTipText("O ano em que o ganho ocorreu.");
 
         javax.swing.GroupLayout panelCadastroGanhoData1Layout = new javax.swing.GroupLayout(panelCadastroGanhoData1);
         panelCadastroGanhoData1.setLayout(panelCadastroGanhoData1Layout);
@@ -434,9 +435,10 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         labelBuscarGanhoValor.setText("Valor:");
 
-        fieldInputBuscarGanhoDesc.setToolTipText("Insira uma descrição dos dados.");
+        fieldInputBuscarGanhoDesc.setToolTipText("A descrição do ganho a ser buscado.");
 
-        fieldInputBuscarGanhoValor.setToolTipText("Insira o valor dos dados.");
+        fieldInputBuscarGanhoValor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        fieldInputBuscarGanhoValor.setToolTipText("O valor do ganho a ser buscado.");
         fieldInputBuscarGanhoValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldInputBuscarGanhoValorActionPerformed(evt);

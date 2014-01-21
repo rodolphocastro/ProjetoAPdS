@@ -176,7 +176,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="31" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o dia componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O dia em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelCadastroGanhoDataMes">
@@ -194,7 +194,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="12" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o m&#xea;s componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O m&#xea;s em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="spinnerCadastroGanhoDataAno">
@@ -202,7 +202,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="2000" maximum="2020" minimum="2000" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o ano componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O ano em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -272,12 +272,13 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="fieldInputCadastrarGanhoDesc">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira uma descri&#xe7;&#xe3;o dos dados."/>
+                    <Property name="toolTipText" type="java.lang.String" value="Uma breve descri&#xe7;&#xe3;o do ganho a ser cadastrado."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="fieldInputCadastrarGanhoValor">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o valor dos dados."/>
+                    <Property name="text" type="java.lang.String" value="R$ 1.000,00"/>
+                    <Property name="toolTipText" type="java.lang.String" value="O valor do ganho."/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldInputCadastrarGanhoValorActionPerformed"/>
@@ -427,7 +428,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="fieldInputRemoverGanhoDesc">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira uma descri&#xe7;&#xe3;o dos dados."/>
+                    <Property name="toolTipText" type="java.lang.String" value="A descri&#xe7;&#xe3;o do ganho a ser removido."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -509,7 +510,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="31" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o dia componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O dia em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="spinnerRemoverGanhoMes">
@@ -517,7 +518,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="12" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o m&#xea;s componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O m&#xea;s em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="spinnerRemoverGanhoAno">
@@ -525,7 +526,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="2000" maximum="2020" minimum="2000" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o ano componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O ano em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -695,7 +696,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="31" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o dia componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O dia em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelBuscarGanhoDataMes">
@@ -713,7 +714,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="1" maximum="12" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o m&#xea;s componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O m&#xea;s em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="spinnerBuscarGanhoDataAno">
@@ -721,7 +722,7 @@
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="2000" maximum="2020" minimum="2000" numberType="java.lang.Integer" stepSize="1" type="number"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o ano componente da data."/>
+                    <Property name="toolTipText" type="java.lang.String" value="O ano em que o ganho ocorreu."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -791,12 +792,19 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="fieldInputBuscarGanhoDesc">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira uma descri&#xe7;&#xe3;o dos dados."/>
+                    <Property name="toolTipText" type="java.lang.String" value="A descri&#xe7;&#xe3;o do ganho a ser buscado."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="fieldInputBuscarGanhoValor">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Insira o valor dos dados."/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                        <LineBorder>
+                          <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
+                        </LineBorder>
+                      </Border>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="O valor do ganho a ser buscado."/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldInputBuscarGanhoValorActionPerformed"/>
