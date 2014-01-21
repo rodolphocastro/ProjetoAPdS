@@ -36,6 +36,16 @@ public interface Errors {
      */
     public static final String DATABASE_INVALID_CREATE_TABLE_DESC = "Ocorreu um erro ao tentar criar uma table na database.";
     
+        /**
+     * Código de erro para quando a chave inserida viola a unicidade da PrimaryKey
+     */
+    public static final int DATABASE_PK_NOT_UNIQUE = 203;
+    
+    /**
+     * Descrição para o erro do sqlite pk not unique
+     */
+    public static final String DATABASE_PK_NOT_UNIQUE_DESC = "A chave inserida não já está registrada na DATABASE.";
+    
     /**
      * Código de erro para quando o arquivo de opções não é encontrado.
      */
@@ -56,13 +66,4 @@ public interface Errors {
      */
     public static final String SQLITE_LIBRARY_NOT_FOUND_DESC = "A biblioteca SQLITE não foi encontrada.";
     
-    /**
-     * Código de erro para quando a chave inserida viola a unicidade da PrimaryKey
-     */
-    public static final int SQLITE_PK_NOT_UNIQUE = 402;
-    
-    /**
-     * Descrição para o erro do sqlite pk not unique
-     */
-    public static final String SQLITE_PK_NOT_UNIQUE_DESC = "A chave inserida não já está registrada na DATABASE.";
 }
