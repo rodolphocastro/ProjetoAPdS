@@ -317,6 +317,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar o cadastro."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadastrarDespesaCancelarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -562,6 +565,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar a remo&#xe7;&#xe3;o."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoverDespesaCancelarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -833,6 +839,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar a busca."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarDespesaCancelarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

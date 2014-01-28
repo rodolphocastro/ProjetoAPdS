@@ -50,6 +50,11 @@ public class JanelaLogin extends javax.swing.JFrame {
 
         buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCancelar.setText("Cancelar");
+        buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCancelarActionPerformed(evt);
+            }
+        });
 
         buttonLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_login.png"))); // NOI18N
         buttonLogin.setText("Login");
@@ -110,9 +115,19 @@ public class JanelaLogin extends javax.swing.JFrame {
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         //Teste de avisos!
-        JOptionPane.showMessageDialog(null, "The zoeira never ends!");
+        //JOptionPane.showMessageDialog(null, "The zoeira never ends!");
         //FUNCIONA! Se der erro, exibir mensagem sobre o erro!
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonLoginActionPerformed
+
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaInicial janelaInicial = new JanelaInicial();
+        this.dispose();
+        janelaInicial.setVisible(true);
+    }//GEN-LAST:event_buttonCancelarActionPerformed
 
     /**
      * @param args the command line arguments

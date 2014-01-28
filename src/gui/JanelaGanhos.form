@@ -303,6 +303,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar o cadastro."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadastroGanhoCancelarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonCadastroGanhoAdicionar">
               <Properties>
@@ -557,6 +560,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar remo&#xe7;&#xe3;o de ganho."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoverGanhoCancelarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -829,6 +835,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar a busca."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarGanhoCancelarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonBuscarGanhoBuscar">
               <Properties>

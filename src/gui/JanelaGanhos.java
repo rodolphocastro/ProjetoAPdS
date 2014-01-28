@@ -192,6 +192,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonCadastroGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCadastroGanhoCancelar.setText("Cancelar");
         buttonCadastroGanhoCancelar.setToolTipText("Cancelar o cadastro.");
+        buttonCadastroGanhoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastroGanhoCancelarActionPerformed(evt);
+            }
+        });
 
         buttonCadastroGanhoAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
         buttonCadastroGanhoAdicionar.setText("Adicionar");
@@ -331,6 +336,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonRemoverGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonRemoverGanhoCancelar.setText("Cancelar");
         buttonRemoverGanhoCancelar.setToolTipText("Cancelar remoção de ganho.");
+        buttonRemoverGanhoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRemoverGanhoCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout paneRemoverGanhoLayout = new javax.swing.GroupLayout(paneRemoverGanho);
         paneRemoverGanho.setLayout(paneRemoverGanhoLayout);
@@ -483,6 +493,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonBuscarGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonBuscarGanhoCancelar.setText("Cancelar");
         buttonBuscarGanhoCancelar.setToolTipText("Cancelar a busca.");
+        buttonBuscarGanhoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarGanhoCancelarActionPerformed(evt);
+            }
+        });
 
         buttonBuscarGanhoBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
         buttonBuscarGanhoBuscar.setText("Buscar");
@@ -550,6 +565,27 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private void fieldInputBuscarGanhoValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputBuscarGanhoValorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldInputBuscarGanhoValorActionPerformed
+
+    private void buttonCadastroGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
+    }//GEN-LAST:event_buttonCadastroGanhoCancelarActionPerformed
+
+    private void buttonRemoverGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverGanhoCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
+    }//GEN-LAST:event_buttonRemoverGanhoCancelarActionPerformed
+
+    private void buttonBuscarGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarGanhoCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
+    }//GEN-LAST:event_buttonBuscarGanhoCancelarActionPerformed
 
     /**
      * @param args the command line arguments

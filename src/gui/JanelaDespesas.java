@@ -192,6 +192,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonCadastrarDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCadastrarDespesaCancelar.setText("Cancelar");
         buttonCadastrarDespesaCancelar.setToolTipText("Cancelar o cadastro.");
+        buttonCadastrarDespesaCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastrarDespesaCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelCadastrarDespesaLayout = new javax.swing.GroupLayout(panelCadastrarDespesa);
         panelCadastrarDespesa.setLayout(panelCadastrarDespesaLayout);
@@ -327,6 +332,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonRemoverDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonRemoverDespesaCancelar.setText("Cancelar");
         buttonRemoverDespesaCancelar.setToolTipText("Cancelar a remoção.");
+        buttonRemoverDespesaCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRemoverDespesaCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panellRemoverDespesaLayout = new javax.swing.GroupLayout(panellRemoverDespesa);
         panellRemoverDespesa.setLayout(panellRemoverDespesaLayout);
@@ -477,6 +487,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonBuscarDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonBuscarDespesaCancelar.setText("Cancelar");
         buttonBuscarDespesaCancelar.setToolTipText("Cancelar a busca.");
+        buttonBuscarDespesaCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarDespesaCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelBuscarDespesaLayout = new javax.swing.GroupLayout(panelBuscarDespesa);
         panelBuscarDespesa.setLayout(panelBuscarDespesaLayout);
@@ -538,6 +553,27 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonCadastrarDespesaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarDespesaCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
+    }//GEN-LAST:event_buttonCadastrarDespesaCancelarActionPerformed
+
+    private void buttonRemoverDespesaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverDespesaCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
+    }//GEN-LAST:event_buttonRemoverDespesaCancelarActionPerformed
+
+    private void buttonBuscarDespesaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarDespesaCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+        this.dispose();
+        janelaMainMenu.setVisible(true);
+    }//GEN-LAST:event_buttonBuscarDespesaCancelarActionPerformed
 
     /**
      * @param args the command line arguments

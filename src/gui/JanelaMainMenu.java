@@ -42,12 +42,22 @@ public class JanelaMainMenu extends javax.swing.JFrame {
         buttonGanhos.setToolTipText("Cadastrar, remover ou buscar ganhos.");
         buttonGanhos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonGanhos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buttonGanhos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonGanhosActionPerformed(evt);
+            }
+        });
 
         buttonDespesas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_despesas.png"))); // NOI18N
         buttonDespesas.setText("Despesas");
         buttonDespesas.setToolTipText("Cadastrar, remover ou buscar despesas.");
         buttonDespesas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonDespesas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buttonDespesas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonDespesasActionPerformed(evt);
+            }
+        });
 
         buttonRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_relatorio.png"))); // NOI18N
         buttonRelatorios.setText("Relatorios");
@@ -112,6 +122,20 @@ public class JanelaMainMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonGanhosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGanhosActionPerformed
+        // TODO add your handling code here:
+        JanelaGanhos janelaGanhos = new JanelaGanhos();
+        this.dispose();
+        janelaGanhos.setVisible(true);
+    }//GEN-LAST:event_buttonGanhosActionPerformed
+
+    private void buttonDespesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDespesasActionPerformed
+        // TODO add your handling code here:
+        JanelaDespesas janelaDespesas = new JanelaDespesas();
+        this.dispose();
+        janelaDespesas.setVisible(true);
+    }//GEN-LAST:event_buttonDespesasActionPerformed
 
     /**
      * @param args the command line arguments

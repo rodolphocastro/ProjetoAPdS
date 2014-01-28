@@ -77,6 +77,9 @@
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
         <Property name="toolTipText" type="java.lang.String" value="Cadastrar um novo usu&#xe1;rio."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadastrarUsuarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonLoginUsuario">
       <Properties>
@@ -86,6 +89,9 @@
         <Property name="text" type="java.lang.String" value="Login"/>
         <Property name="toolTipText" type="java.lang.String" value="Fazer login com um usu&#xe1;rio j&#xe1; existente."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonLoginUsuarioActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

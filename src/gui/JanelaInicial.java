@@ -40,10 +40,20 @@ public class JanelaInicial extends javax.swing.JFrame {
         buttonCadastrarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_addUser.png"))); // NOI18N
         buttonCadastrarUsuario.setText("Cadastrar");
         buttonCadastrarUsuario.setToolTipText("Cadastrar um novo usuário.");
+        buttonCadastrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastrarUsuarioActionPerformed(evt);
+            }
+        });
 
         buttonLoginUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_login.png"))); // NOI18N
         buttonLoginUsuario.setText("Login");
         buttonLoginUsuario.setToolTipText("Fazer login com um usuário já existente.");
+        buttonLoginUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLoginUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,6 +87,20 @@ public class JanelaInicial extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonLoginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginUsuarioActionPerformed
+        // TODO add your handling code here:
+        JanelaLogin janelaLogin = new JanelaLogin();
+        this.dispose();
+        janelaLogin.setVisible(true);
+    }//GEN-LAST:event_buttonLoginUsuarioActionPerformed
+
+    private void buttonCadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarUsuarioActionPerformed
+        // TODO add your handling code here:
+        JanelaCadastroUsuario janelaCadastroUsuario = new JanelaCadastroUsuario();
+        this.dispose();
+        janelaCadastroUsuario.setVisible(true);
+    }//GEN-LAST:event_buttonCadastrarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
