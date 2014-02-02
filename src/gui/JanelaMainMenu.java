@@ -165,6 +165,7 @@ public class JanelaMainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         JanelaOpcoes janelaOpcoes = new JanelaOpcoes();
         janelaOpcoes.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_buttonOpcoesActionPerformed
 
     private void buttonRelatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRelatoriosActionPerformed

@@ -47,6 +47,7 @@ public class JanellaGrafico extends javax.swing.JFrame {
             .addGap(0, 250, Short.MAX_VALUE)
         );
 
+        buttonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_back.png"))); // NOI18N
         buttonVoltar.setText("Voltar");
         buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
