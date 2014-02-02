@@ -568,23 +568,17 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
     private void buttonCadastroGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoCancelarActionPerformed
         // TODO add your handling code here:
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
         this.dispose();
-        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonCadastroGanhoCancelarActionPerformed
 
     private void buttonRemoverGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverGanhoCancelarActionPerformed
         // TODO add your handling code here:
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
         this.dispose();
-        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonRemoverGanhoCancelarActionPerformed
 
     private void buttonBuscarGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarGanhoCancelarActionPerformed
         // TODO add your handling code here:
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
         this.dispose();
-        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonBuscarGanhoCancelarActionPerformed
 
     /**

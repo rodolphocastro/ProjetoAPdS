@@ -79,6 +79,11 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
         buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCancelar.setText("Cancelar");
         buttonCancelar.setToolTipText("Cancelar o cadastro.");
+        buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCancelarActionPerformed(evt);
+            }
+        });
 
         labelSobrenome.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelSobrenome.setText("Sobrenome:");
@@ -156,6 +161,13 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
             buttonOk.doClick();
         }
     }//GEN-LAST:event_fieldInputSenhaKeyPressed
+
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+        // TODO add your handling code here:
+        JanelaInicial janelaInicial = new JanelaInicial();
+        this.dispose();
+        janelaInicial.setVisible(true);
+    }//GEN-LAST:event_buttonCancelarActionPerformed
 
     /**
      * @param args the command line arguments

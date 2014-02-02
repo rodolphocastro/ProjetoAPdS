@@ -64,24 +64,44 @@ public class JanelaMainMenu extends javax.swing.JFrame {
         buttonRelatorios.setToolTipText("Exibir balanços.");
         buttonRelatorios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonRelatorios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buttonRelatorios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRelatoriosActionPerformed(evt);
+            }
+        });
 
         buttonGraficos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_grafico.png"))); // NOI18N
         buttonGraficos.setText("Gráficos");
         buttonGraficos.setToolTipText("Plotar os ganhos, despesas e balanço.");
         buttonGraficos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonGraficos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buttonGraficos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonGraficosActionPerformed(evt);
+            }
+        });
 
         buttonSimulador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_simulador.png"))); // NOI18N
         buttonSimulador.setText("Simulador");
         buttonSimulador.setToolTipText("Simular compras a vista ou parceladas.");
         buttonSimulador.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonSimulador.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buttonSimulador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSimuladorActionPerformed(evt);
+            }
+        });
 
         buttonOpcoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_opcoes.png"))); // NOI18N
         buttonOpcoes.setText("Opções");
         buttonOpcoes.setToolTipText("Alterar opções do software.");
         buttonOpcoes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonOpcoes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buttonOpcoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonOpcoesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,16 +146,38 @@ public class JanelaMainMenu extends javax.swing.JFrame {
     private void buttonGanhosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGanhosActionPerformed
         // TODO add your handling code here:
         JanelaGanhos janelaGanhos = new JanelaGanhos();
-        this.dispose();
         janelaGanhos.setVisible(true);
     }//GEN-LAST:event_buttonGanhosActionPerformed
 
     private void buttonDespesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDespesasActionPerformed
         // TODO add your handling code here:
         JanelaDespesas janelaDespesas = new JanelaDespesas();
-        this.dispose();
         janelaDespesas.setVisible(true);
     }//GEN-LAST:event_buttonDespesasActionPerformed
+
+    private void buttonGraficosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGraficosActionPerformed
+        // TODO add your handling code here:
+        JanellaGrafico janelaGrafico = new JanellaGrafico();
+        janelaGrafico.setVisible(true);
+    }//GEN-LAST:event_buttonGraficosActionPerformed
+
+    private void buttonOpcoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOpcoesActionPerformed
+        // TODO add your handling code here:
+        JanelaOpcoes janelaOpcoes = new JanelaOpcoes();
+        janelaOpcoes.setVisible(true);
+    }//GEN-LAST:event_buttonOpcoesActionPerformed
+
+    private void buttonRelatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRelatoriosActionPerformed
+        // TODO add your handling code here:
+        JanelaRelatorio janelaRelatorio = new JanelaRelatorio();
+        janelaRelatorio.setVisible(true);
+    }//GEN-LAST:event_buttonRelatoriosActionPerformed
+
+    private void buttonSimuladorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSimuladorActionPerformed
+        // TODO add your handling code here:
+        JanelaSimulador janelaSimulador = new JanelaSimulador();
+        janelaSimulador.setVisible(true);
+    }//GEN-LAST:event_buttonSimuladorActionPerformed
 
     /**
      * @param args the command line arguments

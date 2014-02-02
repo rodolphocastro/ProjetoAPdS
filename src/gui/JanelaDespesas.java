@@ -556,23 +556,17 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
     private void buttonCadastrarDespesaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarDespesaCancelarActionPerformed
         // TODO add your handling code here:
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
         this.dispose();
-        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonCadastrarDespesaCancelarActionPerformed
 
     private void buttonRemoverDespesaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverDespesaCancelarActionPerformed
         // TODO add your handling code here:
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
         this.dispose();
-        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonRemoverDespesaCancelarActionPerformed
 
     private void buttonBuscarDespesaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarDespesaCancelarActionPerformed
         // TODO add your handling code here:
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
         this.dispose();
-        janelaMainMenu.setVisible(true);
     }//GEN-LAST:event_buttonBuscarDespesaCancelarActionPerformed
 
     /**
