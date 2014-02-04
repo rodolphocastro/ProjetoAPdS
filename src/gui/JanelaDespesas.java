@@ -79,7 +79,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonBuscarDespesaAdicionar = new javax.swing.JButton();
         buttonBuscarDespesaCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Despesas");
         setLocationByPlatform(true);
         setResizable(false);

@@ -32,7 +32,8 @@ public class JanellaGrafico extends javax.swing.JFrame {
         buttonVoltar = new javax.swing.JButton();
         buttonOk = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("[SGF - 2014] Grafico");
 
         panelGrafico.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Gráfico"));
 

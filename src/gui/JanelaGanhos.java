@@ -77,7 +77,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonBuscarGanhoCancelar = new javax.swing.JButton();
         buttonBuscarGanhoBuscar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Ganhos");
         setLocationByPlatform(true);
         setResizable(false);
