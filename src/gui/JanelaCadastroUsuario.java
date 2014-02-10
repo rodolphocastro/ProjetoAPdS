@@ -42,6 +42,7 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Cadastrar Usuário");
+        setLocationByPlatform(true);
         setResizable(false);
 
         labelAviso.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -153,7 +154,9 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
-
+        JanelaCadastroConfirmaçãoSenha janelazoeira = new JanelaCadastroConfirmaçãoSenha();
+        janelazoeira.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_buttonOkActionPerformed
 
     private void fieldInputSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldInputSenhaKeyPressed

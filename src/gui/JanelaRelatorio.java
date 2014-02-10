@@ -34,6 +34,8 @@ public class JanelaRelatorio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Relatório");
+        setLocationByPlatform(true);
+        setResizable(false);
 
         buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCancelar.setText("Cancelar");

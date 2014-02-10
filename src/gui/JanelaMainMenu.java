@@ -35,6 +35,7 @@ public class JanelaMainMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[SGF - 2014] Main Menu");
+        setLocationByPlatform(true);
         setResizable(false);
 
         buttonGanhos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/32px_ganhos.png"))); // NOI18N

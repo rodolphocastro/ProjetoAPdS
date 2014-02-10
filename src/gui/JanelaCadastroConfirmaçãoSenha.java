@@ -34,6 +34,7 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[SGF - 2014] Confirmar Senha");
+        setLocationByPlatform(true);
 
         labelDescrição.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelDescrição.setText("Confirme sua senha:");
@@ -54,6 +55,11 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
         buttonOk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
         buttonOk.setText("Ok");
         buttonOk.setToolTipText("Avançar");
+        buttonOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonOkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,6 +103,12 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
     private void fieldInputSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldInputSenhaActionPerformed
+
+    private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
+        JanelaMainMenu mainMenu = new JanelaMainMenu();
+        mainMenu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonOkActionPerformed
 
     /**
      * @param args the command line arguments

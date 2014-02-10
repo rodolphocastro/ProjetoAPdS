@@ -39,6 +39,8 @@ public class JanelaSimulador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Simulador de Juros Simples");
+        setLocationByPlatform(true);
+        setResizable(false);
 
         buttonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_back.png"))); // NOI18N
         buttonVoltar.setText("Voltar");

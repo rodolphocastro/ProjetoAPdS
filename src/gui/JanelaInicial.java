@@ -32,6 +32,7 @@ public class JanelaInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("[Sistema de Gestão Financeira] SGF - 2014");
+        setLocationByPlatform(true);
         setResizable(false);
 
         labelWelcome.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
