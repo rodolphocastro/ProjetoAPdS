@@ -6,9 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import dados.*;
 /**
  * Classe responsável por controlar o acesso ao banco de dados
  * @author alvesrc
@@ -78,6 +76,12 @@ public class Controle {
         stmt.executeUpdate(sqlCmd);
         
         System.out.println("[DEBUG] Tabelas inicializadas.");
+    }
+    
+    public void inserirDespesa(Despesa despesa){
+        String sql="";
+        
+        //sql = "INSERT INTO Despesa VALUES("+sql=despesa.gerarSQL()"+)";
     }
     
     /**
