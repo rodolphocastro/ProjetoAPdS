@@ -67,12 +67,12 @@ public class Controle {
         
         //Create table da entidade Gastos.
         System.out.println("[DEBUG] Inicializando Despesa...");
-        sqlCmd = "CREATE TABLE IF NOT EXISTS Despesa (dia integer, mes integer, ano integer, desc varchar(255), valor real, login varchar(25) references Usuario(login), primary key (login, desc, dia, mes, ano))";
+        sqlCmd = "CREATE TABLE IF NOT EXISTS Despesa (dia integer, mes integer, ano integer, desc varchar(255), valor real, login varchar(25) REFERENCES Usuario(login), primary key (login, desc, dia, mes, ano))";
         stmt.executeUpdate(sqlCmd);
         
         //Create Table da entidade Ganho
         System.out.println("[DEBUG] Inicializando Ganho...");
-        sqlCmd = "CREATE TABLE IF NOT EXISTS Ganho (dia integer, mes integer, ano integer, desc varchar(255), valor real, login varchar(25) references Usuario(login), primary key(dia, mes, ano, desc, login))";
+        sqlCmd = "CREATE TABLE IF NOT EXISTS Ganho (dia integer, mes integer, ano integer, desc varchar(255), valor real, login varchar(25) REFERENCES Usuario(login), primary key(dia, mes, ano, desc, login))";
         stmt.executeUpdate(sqlCmd);
         
         System.out.println("[DEBUG] Tabelas inicializadas.");
@@ -102,17 +102,31 @@ public class Controle {
      */
     public boolean inserirGanho(Ganho ganho){
         //Criando o comando SQL para inserir
-        String sqlCmd = "INSERT INTO TABLE Ganho VALUES(" + ganho.gerarSQL() + /*user.getLogin()*/ "'arcebus'" + ")";
+        String sqlCmd = "INSERT INTO Ganho VALUES(" + ganho.gerarSQL() + /*user.getLogin()*/ "'arcebus'" + ")";
         try {
-            System.err.println(sqlCmd);
+            //System.err.println(sqlCmd);
             ///Criando o statement
             Statement stmt = c.createStatement();
             //Tentando executar o comando
             stmt.executeUpdate(sqlCmd);
         } catch (Exception err) {
-            ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE);
+            System.err.println(err.getClass().toString() + ": " + err.getMessage());
+            return false;
         }
         
+        return true;
+    }
+    
+    public boolean inserirUsuario(Usuario usuario, String pswd){
+        String sqlCmd = "INSERT INTO USUARIO VALUES(" + usuario.gerarSQL() + "'" + pswd +"')";
+        //System.err.println(sqlCmd);
+        try{
+            Statement stmt = c.createStatement();
+            stmt.executeUpdate(sqlCmd);
+        }catch(SQLException err){
+            System.err.println(err.getClass().toString() + ": " + err.getMessage());
+            return false;
+        }
         return true;
     }
 }

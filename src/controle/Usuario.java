@@ -26,6 +26,10 @@ public class Usuario {
         return sNome;
     }
     
-    
+    public String gerarSQL(){
+        String sql = "";
+        sql = "'" + this.login + "', '" + this.nome +"', '" + this.sNome + "', ";
+        return sql;
+    }
     
 }

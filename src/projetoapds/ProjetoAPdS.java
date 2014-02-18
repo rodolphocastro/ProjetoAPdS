@@ -1,6 +1,7 @@
 package projetoapds;
 
 import controle.Controle;
+import controle.Usuario;
 import dados.Ganho;
 import gui.JanelaInicial;
 
@@ -14,9 +15,10 @@ public class ProjetoAPdS {
         Controle core = new Controle();
         //Rotina de testes
         core.executarRotinaDeTestes();
-        Ganho gg = new Ganho((float) 10.01, "Cobaia", 10, 04, 1993);
-        core.inserirGanho(gg);
-        
+        Usuario u = new Usuario("arcebus", "Rodolpho", "Alves");
+        core.inserirUsuario(u, "senha");
+        Ganho g = new Ganho((float) 10.04, "Cobaia", 10, 4, 1993);
+        core.inserirGanho(g);
         JanelaInicial janelaInicial = new JanelaInicial();
         janelaInicial.setVisible(true);
     }
