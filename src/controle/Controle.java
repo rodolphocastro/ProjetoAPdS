@@ -1,9 +1,13 @@
 package controle;
 
-import dados.Gasto;
+import dados.Ganho;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Classe responsável por controlar o acesso ao banco de dados
@@ -11,12 +15,14 @@ import java.sql.Statement;
  */
 public class Controle {
     private Connection c;
+    private Usuario user;
     
     public Controle(){
         //Lógica para iniciar conexão com a database
         boolean result = inicializar();
         if(!result){
-            
+            System.err.println("Ocorreu um erro com a inicialização do programa.");
+            System.exit(0);
         }
     }
     
@@ -27,22 +33,32 @@ public class Controle {
     private boolean inicializar(){
         System.out.println("[DEBUG] Inicializando a conexão com a database...");
         try{
+            //Tentando criar as pastas...
+            boolean pathCreated = new File(Commons.PATH_TO_DEFAULT_FOLDER).mkdirs();
+            if(!pathCreated){
+                System.out.println("[DEBUG] Ocorreu um erro ao criar as pastas.");
+            }
+            
+            //Inicializando a conexão
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:".concat(Commons.PATH_TO_DATABASE));
             System.out.println("[DEBUG] Conexão estabelecida.");
-            
             //Método para criar tabelas
             criarTabelas();
         }catch(Exception err){
-            System.err.println(err.getClass().toString() + err.getMessage());
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_NOT_FOUND));
             return false;
         }
         return true;
     }
     
-    
+    /**
+     * Método para criar tabelas necessárias na database
+     * @throws Exception 
+     */
     private void criarTabelas() throws Exception{
         System.out.println("[DEBUG] Inicializando tabelas...");
+        //Criando o statement
         Statement stmt = c.createStatement();
         String sqlCmd;
         
@@ -61,7 +77,6 @@ public class Controle {
         sqlCmd = "CREATE TABLE IF NOT EXISTS Ganho (dia integer, mes integer, ano integer, desc varchar(255), valor real, login varchar(25) references Usuario(login), primary key(dia, mes, ano, desc, login))";
         stmt.executeUpdate(sqlCmd);
         
-        //PROFIT
         System.out.println("[DEBUG] Tabelas inicializadas.");
     }
     
@@ -77,11 +92,23 @@ public class Controle {
     }
     
     /**
-     * Método para inserir uma tupla na tabela gastos do banco de dados
-     * @param gasto O gasto a ser inserido
-     * @return TRUE se não houver erro, FALSE caso contrário
+     * Método para inserir um ganho na database
+     * @param ganho o ganho a ser inserido
+     * @return TRUE se não houver erros. FALSE caso contrário.
      */
-    public boolean inserirGasto(Gasto gasto){
+    public boolean inserirGanho(Ganho ganho){
+        //Criando o comando SQL para inserir
+        String sqlCmd = "INSERT INTO TABLE Ganho VALUES(" + ganho.gerarSQL() + /*user.getLogin()*/ "'arcebus'" + ")";
+        try {
+            System.err.println(sqlCmd);
+            ///Criando o statement
+            Statement stmt = c.createStatement();
+            //Tentando executar o comando
+            stmt.executeUpdate(sqlCmd);
+        } catch (Exception err) {
+            ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE);
+        }
+        
         return true;
     }
 }

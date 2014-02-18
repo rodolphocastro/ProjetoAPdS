@@ -20,4 +20,8 @@ public interface Commons {
      */
     public static final String OS = System.getProperty("os.name");
     
+    /**
+     * Pasta em que o programa ficará instalado
+     */
+    public static final String PATH_TO_DEFAULT_FOLDER = System.getProperty("user.home").concat("\\SGF2014\\");
 }
