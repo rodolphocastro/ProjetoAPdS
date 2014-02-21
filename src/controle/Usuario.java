@@ -7,7 +7,8 @@ package controle;
 public class Usuario {
     private String login;
     private String nome, sNome;
-
+    private String pswd;
+    
     public Usuario(String login, String nome, String sNome) {
         this.login = login;
         this.nome = nome;
@@ -32,4 +33,11 @@ public class Usuario {
         return sql;
     }
     
+    public void setPswd(String pswd){
+        this.pswd = pswd;
+    }
+    
+    public String getPswd(){
+        return pswd;
+    }
 }

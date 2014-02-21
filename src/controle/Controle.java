@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import dados.*;
+import java.sql.ResultSet;
 
 /**
  * Classe responsável por controlar o acesso ao banco de dados
@@ -155,8 +156,42 @@ public class Controle {
         return true;
     }
     
-    
+    /**
+     * Função para validar o login de um usuário no sistema.
+     * @param login o login do usuário
+     * @param pswd a senha do usuário
+     * @return TRUE se o usuário for validado com sucesso, FALSE caso contrário.
+     */
     public boolean validarUsuario(String login, String pswd){
+        user = buscarUsuario(login);
+        if(user.getLogin().compareToIgnoreCase("notfound")!=0){
+            //Login é válido, validar a senha.
+        }
         return true;
+    }
+    
+    /**
+     * Método para buscar um usuário na database
+     * @param login o login do usuário buscado
+     * @return O usuário encontrado.
+     */
+    private Usuario buscarUsuario(String login){
+        Usuario us = new Usuario("NOTFOUND", "NOTFOUND", "NOTFOUND");
+        us.setPswd("NOTFOUND");
+        try{
+            Statement stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM USUARIO WHERE login = '" + login + "'");
+            String nome, sNome, pswd;
+            nome = rs.getString("nome");
+            sNome = rs.getString("sobrenome");
+            pswd = rs.getString("senha");
+            us = new Usuario(login, nome, sNome);
+            us.setPswd(pswd);
+            rs.close();
+            stmt.close();
+        }catch(Exception err){
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+        }
+        return us;
     }
 }
