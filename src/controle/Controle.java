@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import dados.*;
+
 /**
  * Classe responsável por controlar o acesso ao banco de dados
  * @author alvesrc
@@ -78,6 +79,11 @@ public class Controle {
         System.out.println("[DEBUG] Tabelas inicializadas.");
     }
     
+    /**
+     * Método para inserir uma despesa na database
+     * @param despesa a despesa a ser inserida
+     * @return TRUE se não houver erros, FALSE caso contrário.
+     */
     public boolean inserirDespesa(Despesa despesa){
         String sql="";
         
@@ -129,6 +135,12 @@ public class Controle {
         return true;
     }
     
+    /**
+     * Método para inserir um usuário na database
+     * @param usuario O usuário a ser inserido
+     * @param pswd A senha do usuário a ser inserido
+     * @return TRUE caso execute sem erros, FALSE caso contrário.
+     */
     public boolean inserirUsuario(Usuario usuario, String pswd){
         String sqlCmd = "INSERT INTO USUARIO VALUES(" + usuario.gerarSQL() + "'" + pswd +"')";
         //System.err.println(sqlCmd);
@@ -140,6 +152,11 @@ public class Controle {
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
             return false;
         }
+        return true;
+    }
+    
+    
+    public boolean validarUsuario(String login, String pswd){
         return true;
     }
 }
