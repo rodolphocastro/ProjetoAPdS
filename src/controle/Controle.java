@@ -109,6 +109,7 @@ public class Controle {
             Statement stmt = c.createStatement();
             //Tentando executar o comando
             stmt.executeUpdate(sqlCmd);
+            stmt.close();
         } catch (Exception err) {
             //System.err.println(err.getClass().toString() + ": " + err.getMessage());
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
@@ -124,6 +125,7 @@ public class Controle {
         try{
             Statement stmt = c.createStatement();
             stmt.executeUpdate(sqlCmd);
+            stmt.close();
         }catch(SQLException err){
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
             return false;

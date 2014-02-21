@@ -37,6 +37,15 @@ public interface Errors {
     public static final String DATABASE_PK_NOT_UNIQUE_DESC = "A chave inserida não já está registrada na DATABASE.";
     
     /**
+     * Código de erro para quando o login inserido já existe na database
+     */
+    public static final int USER_LOGIN_NOT_UNIQUE = 202;
+    
+    /**
+     * Descrição para o erro user login not unique
+     */
+    public static final String USER_LOGIN_NOT_UNIQUE_DESC = "O login inserido já está em uso.";
+    /**
      * Código de erro para quando o arquivo de opções não é encontrado.
      */
     public static final int OPTIONS_NOT_FOUND = 301;
