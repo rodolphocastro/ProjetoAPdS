@@ -74,7 +74,7 @@ public class Controle {
         System.out.println("[DEBUG] Inicializando Ganho...");
         sqlCmd = "CREATE TABLE IF NOT EXISTS Ganho (dia integer, mes integer, ano integer, desc varchar(255), valor real, login varchar(25) REFERENCES Usuario(login), primary key(dia, mes, ano, desc, login))";
         stmt.executeUpdate(sqlCmd);
-        
+        stmt.close();
         System.out.println("[DEBUG] Tabelas inicializadas.");
     }
     
@@ -86,6 +86,7 @@ public class Controle {
         try{
             Statement stmt = c.createStatement();
             stmt.executeUpdate(sql);
+            stmt.close();
         }catch(Exception e){
             System.err.println(ErrorHandler.gerarRelatorio(e, Errors.DATABASE_PK_NOT_UNIQUE));
             return false;
