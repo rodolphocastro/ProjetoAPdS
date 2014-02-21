@@ -35,7 +35,7 @@ public class Despesa {
     
     public String gerarSQL(){
         String sql="";
-        sql = " ," + this.dia+ " ," +this.mes+ " ," +this.ano+ " ,' "+ this.desc+"', " + this.valor + ", ";
+        sql = this.dia+ " ," +this.mes+ " ," +this.ano+ " ,' "+ this.desc+"', " + this.valor + ", ";
         return sql;
     }
 }

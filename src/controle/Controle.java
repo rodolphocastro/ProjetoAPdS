@@ -78,10 +78,19 @@ public class Controle {
         System.out.println("[DEBUG] Tabelas inicializadas.");
     }
     
-    public void inserirDespesa(Despesa despesa){
+    public boolean inserirDespesa(Despesa despesa){
         String sql="";
         
-        //sql = "INSERT INTO Despesa VALUES("+sql=despesa.gerarSQL()"+)";
+        sql = "INSERT INTO Despesa VALUES(" +despesa.gerarSQL()+ "'arcebus'" + ")";
+        
+        try{
+            Statement stmt = c.createStatement();
+            stmt.executeUpdate(sql);
+        }catch(Exception e){
+            System.err.println(ErrorHandler.gerarRelatorio(e, Errors.DATABASE_PK_NOT_UNIQUE));
+            return false;
+        }
+        return true;
     }
     
     /**
