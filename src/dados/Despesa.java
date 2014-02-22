@@ -12,6 +12,14 @@ public class Despesa {
     private float valor;
     private String desc;
     private int dia, mes, ano;
+    
+    public Despesa(float valor, String desc, int dia, int mes, int ano) {
+        this.valor = valor;
+        this.desc = desc;
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+    }
 
     public float getValor() {
         return valor;

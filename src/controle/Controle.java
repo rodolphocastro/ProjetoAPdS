@@ -217,4 +217,23 @@ public class Controle {
         }
         return gain;
     }
+    
+    private Despesa buscarDespesa(int dia, int mes, int ano, String desc){
+        Despesa loss = new Despesa(-1, "NOTFOUND", 0, 0, 0);
+        
+        try{
+            Statement stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM DESPESA WHERE dia = '" + dia + "'and mes = '" + mes + "' and ano = '" + ano + "' desc = '" + desc + "'"+ "'");
+            
+            float valor = rs.getFloat("valor");
+            
+            loss = new Despesa(valor, desc, dia, mes, ano);
+            rs.close();
+            stmt.close();
+        }catch(Exception err){
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+        }
+        
+        return loss;
+    }
 }
