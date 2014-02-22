@@ -194,4 +194,27 @@ public class Controle {
         }
         return us;
     }
+    
+    private Ganho buscarGanho(int dia, int mes, int ano, String desc){
+        Ganho gain = new Ganho(-1,"NOTFOUND",0,0,0);
+        
+        try{
+            Statement stmt = c.createStatement();
+            //dia,mes,ano,desc,login
+            ResultSet rs = stmt.executeQuery("SELECT * FROM GANHO WHERE dia='" + dia + "' and mes = '" + mes + "' and ano = '" + ano + "' and desc = '" + desc + "'");
+            
+            float valor;
+            
+            valor = rs.getFloat("valor");
+            
+            gain = new Ganho(valor, desc, dia, mes, ano);
+            
+            rs.close();
+            stmt.close();
+            
+        }catch(Exception err){
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+        }
+        return gain;
+    }
 }
