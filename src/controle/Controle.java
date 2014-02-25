@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import dados.*;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * Classe responsável por controlar o acesso ao banco de dados
@@ -194,18 +195,27 @@ public class Controle {
             rs.close();
             stmt.close();
         }catch(Exception err){
-            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+            //@todo Criar novo código de erro para quando resultSet for inválido
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.UNKNOWN_ERROR));
         }
         return us;
     }
     
+    /**
+     * Método para buscar um ganho específico na database
+     * @param dia o dia do ganho a ser buscado
+     * @param mes o mes do ganho a ser buscado
+     * @param ano o ano do ganho a ser buscado
+     * @param desc a descrição do ganho a ser buscado
+     * @return O resultado da consulta na database
+     */
     private Ganho buscarGanho(int dia, int mes, int ano, String desc){
         Ganho gain = new Ganho(-1,"NOTFOUND",0,0,0);
         
         try{
             Statement stmt = c.createStatement();
             //dia,mes,ano,desc,login
-            ResultSet rs = stmt.executeQuery("SELECT * FROM GANHO WHERE dia='" + dia + "' and mes = '" + mes + "' and ano = '" + ano + "' and desc = '" + desc + "' and ");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM GANHO WHERE dia='" + dia + "' and mes = '" + mes + "' and ano = '" + ano + "' and desc = '" + desc + "' and login = '" + user.getLogin() + "'");
             
             float valor;
             
@@ -221,12 +231,20 @@ public class Controle {
         return gain;
     }
     
+    /**
+     * Método para buscar uma despesa específica na database
+     * @param dia o dia da despesa a ser buscada
+     * @param mes o mes da despesa a ser buscada
+     * @param ano o ano da despesa a ser buscada
+     * @param desc a descrição da despesa a ser buscada
+     * @return O resultado da consulta na database
+     */
     private Despesa buscarDespesa(int dia, int mes, int ano, String desc){
         Despesa loss = new Despesa(-1, "NOTFOUND", 0, 0, 0);
         
         try{
             Statement stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM DESPESA WHERE dia = '" + dia + "'and mes = '" + mes + "' and ano = '" + ano + "' desc = '" + desc + "'"+ "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM DESPESA WHERE dia = '" + dia + "'and mes = '" + mes + "' and ano = '" + ano + "'and desc = '" + desc + "' and login = '" + user.getLogin() + "'");
             
             float valor = rs.getFloat("valor");
             
@@ -234,9 +252,36 @@ public class Controle {
             rs.close();
             stmt.close();
         }catch(Exception err){
-            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+            //@todo Criar novo código de erro para quando resultSet for inválido.
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.UNKNOWN_ERROR));
         }
         
         return loss;
+    }
+
+    /**
+     * Método para retornar todas as despesas de um usuário na databse
+     * @return ArrayList contendo todas as despesas encontradas
+     */
+    private ArrayList<Despesa> buscarDespesasDoUsuario(){
+        ArrayList<Despesa> resultDesp = new ArrayList<>();
+        try{
+            Statement stmt = c.createStatement();
+            //Selecionando todas as despesas do login do usuário.
+            String sqlCmd = "SELECT * FROM DESPESA WHERE login = '" + user.getLogin() + "'";
+            ResultSet rs = stmt.executeQuery(sqlCmd);
+            while(rs.next()){
+                String desc = rs.getString("desc");
+                int dia = rs.getInt("dia"), mes = rs.getInt("mes"), ano = rs.getInt("ano");
+                float valor = rs.getFloat("valor");
+                resultDesp.add(new Despesa(valor, desc, dia, mes, ano));
+            }
+            rs.close();
+            stmt.close();
+        }catch(Exception err){
+            //@todo Criar novo código de erro para quando resultSet for inválido.
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.UNKNOWN_ERROR));
+        }
+        return resultDesp;
     }
 }

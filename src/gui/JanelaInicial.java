@@ -4,12 +4,25 @@
  */
 package gui;
 
+import controle.Controle;
+
 /**
  *
  * @author alvesrc
  */
 public class JanelaInicial extends javax.swing.JFrame {
 
+    //Controle do programa
+    private Controle core;
+    
+    /**
+     * Método para definir um controle do programa para esta janela
+     * @param newCore O core a ser utilizado pela janela
+     */
+    public void setCore(Controle newCore){
+        core = newCore;
+    }
+    
     /**
      * Creates new form JanelaInicial
      */
@@ -90,17 +103,23 @@ public class JanelaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonLoginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginUsuarioActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaLogin janelaLogin = new JanelaLogin();
-        this.dispose();
+        //Passando o core para a próxima janela
+        janelaLogin.setCore(core);
+        //Definindo a próxima janela como visível
         janelaLogin.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_buttonLoginUsuarioActionPerformed
 
     private void buttonCadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarUsuarioActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaCadastroUsuario janelaCadastroUsuario = new JanelaCadastroUsuario();
-        this.dispose();
+        //Pasando o controle para a próxima janela
+        janelaCadastroUsuario.setCore(core);
+        //Definindo a próxima janela como visível
         janelaCadastroUsuario.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_buttonCadastrarUsuarioActionPerformed
 
     /**

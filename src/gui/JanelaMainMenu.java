@@ -4,12 +4,25 @@
  */
 package gui;
 
+import controle.Controle;
+
 /**
  *
  * @author alvesrc
  */
 public class JanelaMainMenu extends javax.swing.JFrame {
 
+    //Controle do programa
+    private Controle core;
+    
+    /**
+     * Método para definir um controle do programa para esta janela
+     * @param newCore O core a ser utilizado pela janela
+     */
+    public void setCore(Controle newCore){
+        core = newCore;
+    }
+    
     /**
      * Creates new form JanelaMainMenu
      */

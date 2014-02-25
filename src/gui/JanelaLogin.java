@@ -4,6 +4,7 @@
  */
 package gui;
 
+import controle.Controle;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,6 +13,17 @@ import javax.swing.JOptionPane;
  */
 public class JanelaLogin extends javax.swing.JFrame {
 
+    //Controle do programa
+    private Controle core;
+    
+    /**
+     * Método para definir um controle do programa para esta janela
+     * @param newCore O core a ser utilizado pela janela
+     */
+    public void setCore(Controle newCore){
+        core = newCore;
+    }
+    
     /**
      * Creates new form JanelaLogin
      */
@@ -115,12 +127,26 @@ public class JanelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
-        //Teste de avisos!
-        //JOptionPane.showMessageDialog(null, "The zoeira never ends!");
-        //FUNCIONA! Se der erro, exibir mensagem sobre o erro!
-        JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
-        this.dispose();
-        janelaMainMenu.setVisible(true);
+        //Fazendo leitura dos valores informados pelo usuário
+        String pswd = new String(this.fieldInputSenha.getPassword());
+        String login = this.fieldInputLogin.getText();
+        //Tentando validar os dados informados para a interface
+        if(core.validarUsuario(login, pswd)){
+            //Dados válidos. 
+            //Remover pswd da memória
+            pswd = null;
+            //Criar a próxima janela
+            JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+            //Passar o controle para a próxima janela
+            janelaMainMenu.setCore(core);
+            //Definir a nova janela como visível
+            janelaMainMenu.setVisible(true);
+            //Descartar a atual janela
+            this.dispose();
+        }else{
+            //Os dados informados não são válidos.
+            JOptionPane.showMessageDialog(null, "Os dados informados são inválidos.");
+        }
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed

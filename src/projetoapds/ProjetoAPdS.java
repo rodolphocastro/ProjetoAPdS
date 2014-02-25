@@ -12,14 +12,13 @@ import gui.JanelaInicial;
 public class ProjetoAPdS {
 
     public static void main(String[] args) {
+        //Criando o core do programa
         Controle core = new Controle();
-        //Rotina de testes
-        core.executarRotinaDeTestes();
-        Usuario u = new Usuario("arcebus", "Rodolpho", "Alves");
-        core.inserirUsuario(u, "senha");
-        Ganho g = new Ganho((float) 10.04, "Cobaia", 10, 4, 1993);
-        core.inserirGanho(g);
+        //Criando a janela inicial
         JanelaInicial janelaInicial = new JanelaInicial();
+        //Passando o core para a nova janela
+        janelaInicial.setCore(core);
+        //Definindo a janela como visivel
         janelaInicial.setVisible(true);
     }
 }
