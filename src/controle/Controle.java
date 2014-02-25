@@ -87,16 +87,17 @@ public class Controle {
      * @return TRUE se não houver erros, FALSE caso contrário.
      */
     public boolean inserirDespesa(Despesa despesa){
-        String sql="";
-        
-        sql = "INSERT INTO Despesa VALUES(" +despesa.gerarSQL()+ "'arcebus'" + ")";
-        
+        //Criando o comando SQL para inserir a despesa
+        String sqlCmd = "INSERT INTO DESPESA VALUES(" + despesa.gerarSQL() + user.getLogin() + ")";
         try{
+            //Criando o statement
             Statement stmt = c.createStatement();
-            stmt.executeUpdate(sql);
+            //Tentando executar o comando
+            stmt.executeUpdate(sqlCmd);
             stmt.close();
-        }catch(Exception e){
-            System.err.println(ErrorHandler.gerarRelatorio(e, Errors.DATABASE_PK_NOT_UNIQUE));
+        }catch(Exception err){
+            //em caso de erro, informar o erro.
+            System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
             return false;
         }
         return true;
@@ -120,16 +121,14 @@ public class Controle {
      */
     public boolean inserirGanho(Ganho ganho){
         //Criando o comando SQL para inserir
-        String sqlCmd = "INSERT INTO Ganho VALUES(" + ganho.gerarSQL() + /*user.getLogin()*/ "'arcebus'" + ")";
+        String sqlCmd = "INSERT INTO Ganho VALUES(" + ganho.gerarSQL() + user.getLogin() + ")";
         try {
-            //System.err.println(sqlCmd);
             ///Criando o statement
             Statement stmt = c.createStatement();
             //Tentando executar o comando
             stmt.executeUpdate(sqlCmd);
             stmt.close();
         } catch (Exception err) {
-            //System.err.println(err.getClass().toString() + ": " + err.getMessage());
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
             return false;
         }

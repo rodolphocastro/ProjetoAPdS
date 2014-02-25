@@ -9,9 +9,9 @@ package dados;
  * @author alvesrc
  */
 public class Despesa {
-    private float valor;
-    private String desc;
-    private int dia, mes, ano;
+    private final float valor;
+    private final String desc;
+    private final int dia, mes, ano;
     
     public Despesa(float valor, String desc, int dia, int mes, int ano) {
         this.valor = valor;
@@ -41,9 +41,13 @@ public class Despesa {
         return ano;
     }    
     
+    /**
+     * Método para gerar um comando SQL contendo dia, mes, ano, desc e valor. Lembre-se de adicionar o usuário
+     * @return String para os valores SQL a serem inseridos, só faltando o login.
+     */
     public String gerarSQL(){
-        String sql="";
-        sql = this.dia+ " ," +this.mes+ " ," +this.ano+ " ,' "+ this.desc+"', " + this.valor + ", ";
+        String sql = "";
+        sql = this.dia + ", " + this.mes + ", " + this.ano + ", '" + this.desc + "', " + this.valor + ", ";
         return sql;
     }
 }
