@@ -5,6 +5,8 @@
 package gui;
 
 import controle.Controle;
+import dados.Ganho;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -201,6 +203,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonCadastroGanhoLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
         buttonCadastroGanhoLimpar.setText("Limpar");
         buttonCadastroGanhoLimpar.setToolTipText("Limpar os campos da tela.");
+        buttonCadastroGanhoLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastroGanhoLimparActionPerformed(evt);
+            }
+        });
 
         buttonCadastroGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCadastroGanhoCancelar.setText("Cancelar");
@@ -346,6 +353,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonRemoverGanhoLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
         buttonRemoverGanhoLimpar.setText("Limpar");
         buttonRemoverGanhoLimpar.setToolTipText("Limpar os campos da tela.");
+        buttonRemoverGanhoLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRemoverGanhoLimparActionPerformed(evt);
+            }
+        });
 
         buttonRemoverGanhoRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_delete.png"))); // NOI18N
         buttonRemoverGanhoRemover.setText("Remover");
@@ -507,6 +519,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonBuscarGanhoLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
         buttonBuscarGanhoLimpar.setText("Limpar");
         buttonBuscarGanhoLimpar.setToolTipText("Limpar os campos da tela.");
+        buttonBuscarGanhoLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarGanhoLimparActionPerformed(evt);
+            }
+        });
 
         buttonBuscarGanhoCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonBuscarGanhoCancelar.setText("Cancelar");
@@ -585,23 +602,53 @@ public class JanelaGanhos extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldInputBuscarGanhoValorActionPerformed
 
     private void buttonCadastroGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoCancelarActionPerformed
-        // TODO add your handling code here:
+       // Descartando a janela atual
         this.dispose();
     }//GEN-LAST:event_buttonCadastroGanhoCancelarActionPerformed
 
     private void buttonRemoverGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverGanhoCancelarActionPerformed
-        // TODO add your handling code here:
+        // Descartando a janela atual
         this.dispose();
     }//GEN-LAST:event_buttonRemoverGanhoCancelarActionPerformed
 
     private void buttonBuscarGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarGanhoCancelarActionPerformed
-        // TODO add your handling code here:
+        // Descartando a janela atual
         this.dispose();
     }//GEN-LAST:event_buttonBuscarGanhoCancelarActionPerformed
 
     private void buttonCadastroGanhoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoAdicionarActionPerformed
-      
+        //Fazendo leitura dos campos
+        String desc = this.fieldInputCadastrarGanhoDesc.getText();
+        float valor = Float.parseFloat(this.fieldInputCadastrarGanhoValor.getText());
+        int dia, mes, ano;
+        dia = (int) this.spinnerCadastroGanhoDataDia.getValue();
+        mes = (int) this.spinnerCadastroGanhoDataMes.getValue();
+        ano = (int) this.spinnerCadastroGanhoDataAno.getValue();
+        //Criando novo objeto ganho
+        Ganho g = new Ganho(valor, desc, dia, mes, ano);
+        //Tentando inserir o ganho na database
+        if(core.inserirGanho(g)){
+            //...ganho cadastrado com êxito.
+            //@todo Melhorar mensagens dos dialogs.
+            JOptionPane.showMessageDialog(null, "Os dados foram cadastrados com êxito.");
+        }else{
+            //...houve um erro ao cadastrar o ganho.
+            //@todo Melhorar mensagens dos dialogs.
+            JOptionPane.showMessageDialog(null, "Os dados não puderam ser cadastrados.");
+        }
     }//GEN-LAST:event_buttonCadastroGanhoAdicionarActionPerformed
+
+    private void buttonCadastroGanhoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoLimparActionPerformed
+        //@todo Implementar método para limpar TODOS os campos da JanelaGanhos
+    }//GEN-LAST:event_buttonCadastroGanhoLimparActionPerformed
+
+    private void buttonRemoverGanhoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverGanhoLimparActionPerformed
+        //@todo Implementar método para limpar TODOS os campos da JanelaGanhos
+    }//GEN-LAST:event_buttonRemoverGanhoLimparActionPerformed
+
+    private void buttonBuscarGanhoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarGanhoLimparActionPerformed
+        //@todo Implementar método para limpar TODOS os campos da JanelaGanhos
+    }//GEN-LAST:event_buttonBuscarGanhoLimparActionPerformed
 
     /**
      * @param args the command line arguments

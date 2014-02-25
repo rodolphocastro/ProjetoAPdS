@@ -88,7 +88,7 @@ public class Controle {
      */
     public boolean inserirDespesa(Despesa despesa){
         //Criando o comando SQL para inserir a despesa
-        String sqlCmd = "INSERT INTO DESPESA VALUES(" + despesa.gerarSQL() + user.getLogin() + ")";
+        String sqlCmd = "INSERT INTO DESPESA VALUES(" + despesa.gerarSQL() + " '" + user.getLogin() + "'";
         try{
             //Criando o statement
             Statement stmt = c.createStatement();
@@ -121,7 +121,7 @@ public class Controle {
      */
     public boolean inserirGanho(Ganho ganho){
         //Criando o comando SQL para inserir
-        String sqlCmd = "INSERT INTO Ganho VALUES(" + ganho.gerarSQL() + user.getLogin() + ")";
+        String sqlCmd = "INSERT INTO Ganho VALUES(" + ganho.gerarSQL() + " '" + user.getLogin() + "')";
         try {
             ///Criando o statement
             Statement stmt = c.createStatement();
@@ -263,6 +263,7 @@ public class Controle {
      * @return ArrayList contendo todas as despesas encontradas
      */
     private ArrayList<Despesa> buscarDespesasDoUsuario(){
+        //@todo Testar o método de buscarDespesasDoUsuario
         ArrayList<Despesa> resultDesp = new ArrayList<>();
         try{
             Statement stmt = c.createStatement();

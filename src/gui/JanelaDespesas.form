@@ -299,6 +299,9 @@
                 <Property name="text" type="java.lang.String" value="Limpar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Limpar os campos da tela."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadastrarDespesaLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonCadastrarDespesaAdicionar">
               <Properties>
@@ -547,6 +550,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoverDespesaLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonRemoverDespesaRemover">
               <Properties>
@@ -821,6 +827,9 @@
                 <Property name="text" type="java.lang.String" value="Limpar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Limpar os campos da tela."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarDespesaLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonBuscarDespesaAdicionar">
               <Properties>

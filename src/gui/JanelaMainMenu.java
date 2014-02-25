@@ -158,39 +158,58 @@ public class JanelaMainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonGanhosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGanhosActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaGanhos janelaGanhos = new JanelaGanhos();
+        //Passando o controle para a próxima janela
+        janelaGanhos.setCore(core);
+        //Definindo a nova janela como visível
         janelaGanhos.setVisible(true);
     }//GEN-LAST:event_buttonGanhosActionPerformed
 
     private void buttonDespesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDespesasActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaDespesas janelaDespesas = new JanelaDespesas();
+        //Passando o controle para a próxima janela
+        janelaDespesas.setCore(core);
+        //Definindo a próxima janela como visível
         janelaDespesas.setVisible(true);
     }//GEN-LAST:event_buttonDespesasActionPerformed
 
     private void buttonGraficosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGraficosActionPerformed
-        // TODO add your handling code here:
-        JanellaGrafico janelaGrafico = new JanellaGrafico();
+        //Criando a próxima janela
+        JanelaGrafico janelaGrafico = new JanelaGrafico();
+        //Passando o controle para a próxima janela
+        janelaGrafico.setCore(core);
+        //Definindo a nova janela como visível
         janelaGrafico.setVisible(true);
     }//GEN-LAST:event_buttonGraficosActionPerformed
 
     private void buttonOpcoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOpcoesActionPerformed
-        // TODO add your handling code here:
+        ///Criando a próxima janela
         JanelaOpcoes janelaOpcoes = new JanelaOpcoes();
+        //Passando o controle para a próxima janela
+        janelaOpcoes.setCore(core);
+        //Definindo a nova janela como visível
         janelaOpcoes.setVisible(true);
+        //Descartando a janela atual
         this.dispose();
     }//GEN-LAST:event_buttonOpcoesActionPerformed
 
     private void buttonRelatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRelatoriosActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaRelatorio janelaRelatorio = new JanelaRelatorio();
+        //Passando o controle para a próxima janela
+        janelaRelatorio.setCore(core);
+        //Definindo a próxima janela como visível
         janelaRelatorio.setVisible(true);
     }//GEN-LAST:event_buttonRelatoriosActionPerformed
 
     private void buttonSimuladorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSimuladorActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaSimulador janelaSimulador = new JanelaSimulador();
+        //Passando o controle para a próxima janela
+        janelaSimulador.setCore(core);
+        //Definindo a nova janela como visível
         janelaSimulador.setVisible(true);
     }//GEN-LAST:event_buttonSimuladorActionPerformed
 

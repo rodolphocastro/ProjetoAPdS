@@ -34,7 +34,7 @@ public interface Errors {
     /**
      * Descrição para o erro do sqlite pk not unique
      */
-    public static final String DATABASE_PK_NOT_UNIQUE_DESC = "A chave inserida não já está registrada na DATABASE.";
+    public static final String DATABASE_PK_NOT_UNIQUE_DESC = "A chave inserida já está registrada na DATABASE.";
     
     /**
      * Código de erro para quando o login inserido já existe na database

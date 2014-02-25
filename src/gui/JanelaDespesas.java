@@ -197,6 +197,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonCadastrarDespesaLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
         buttonCadastrarDespesaLimpar.setText("Limpar");
         buttonCadastrarDespesaLimpar.setToolTipText("Limpar os campos da tela.");
+        buttonCadastrarDespesaLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastrarDespesaLimparActionPerformed(evt);
+            }
+        });
 
         buttonCadastrarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
         buttonCadastrarDespesaAdicionar.setText("Adicionar");
@@ -337,6 +342,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         buttonRemoverDespesaLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
         buttonRemoverDespesaLimpar.setText("Limpar");
+        buttonRemoverDespesaLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRemoverDespesaLimparActionPerformed(evt);
+            }
+        });
 
         buttonRemoverDespesaRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_delete.png"))); // NOI18N
         buttonRemoverDespesaRemover.setText("Remover");
@@ -492,6 +502,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonBuscarDespesaLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_limpar.png"))); // NOI18N
         buttonBuscarDespesaLimpar.setText("Limpar");
         buttonBuscarDespesaLimpar.setToolTipText("Limpar os campos da tela.");
+        buttonBuscarDespesaLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarDespesaLimparActionPerformed(evt);
+            }
+        });
 
         buttonBuscarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
         buttonBuscarDespesaAdicionar.setText("Buscar");
@@ -581,6 +596,18 @@ public class JanelaDespesas extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_buttonBuscarDespesaCancelarActionPerformed
+
+    private void buttonCadastrarDespesaLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarDespesaLimparActionPerformed
+        //@todo Implementar método para limpar TODOS os campos da JanelaDespesas
+    }//GEN-LAST:event_buttonCadastrarDespesaLimparActionPerformed
+
+    private void buttonRemoverDespesaLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverDespesaLimparActionPerformed
+        //@todo Implementar método para limpar TODOS os campos da JanelaDespesas
+    }//GEN-LAST:event_buttonRemoverDespesaLimparActionPerformed
+
+    private void buttonBuscarDespesaLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarDespesaLimparActionPerformed
+        //@todo Implementar método para limpar TODOS os campos da JanelaDespesas
+    }//GEN-LAST:event_buttonBuscarDespesaLimparActionPerformed
 
     /**
      * @param args the command line arguments

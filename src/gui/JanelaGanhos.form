@@ -294,6 +294,9 @@
                 <Property name="text" type="java.lang.String" value="Limpar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Limpar os campos da tela."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadastroGanhoLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonCadastroGanhoCancelar">
               <Properties>
@@ -545,6 +548,9 @@
                 <Property name="text" type="java.lang.String" value="Limpar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Limpar os campos da tela."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoverGanhoLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonRemoverGanhoRemover">
               <Properties>
@@ -829,6 +835,9 @@
                 <Property name="text" type="java.lang.String" value="Limpar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Limpar os campos da tela."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarGanhoLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonBuscarGanhoCancelar">
               <Properties>
