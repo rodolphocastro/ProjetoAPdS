@@ -150,10 +150,14 @@ public class JanelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaInicial janelaInicial = new JanelaInicial();
-        this.dispose();
+        //Passando o controle para a próxima janela
+        janelaInicial.setCore(core);
+        //Definindo a próxima janela como visível
         janelaInicial.setVisible(true);
+        //Descartando a atual janela
+        this.dispose();
     }//GEN-LAST:event_buttonCancelarActionPerformed
 
     /**

@@ -5,6 +5,7 @@
 package gui;
 
 import controle.Controle;
+import controle.Usuario;
 import java.awt.event.KeyEvent;
 
 /**
@@ -166,22 +167,44 @@ public class JanelaCadastroUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
-        JanelaCadastroConfirmaçãoSenha janelazoeira = new JanelaCadastroConfirmaçãoSenha();
-        janelazoeira.setVisible(true);
+        //Fazendo leitura dos dados informados pelo usuário
+        String login = this.fieldInputLogin.getText();
+        String nome = this.fieldInputNome.getText();
+        String sobrenome = this.fieldInputSobrenome.getText();
+        String pswd = new String(this.fieldInputSenha.getPassword());
+        //Criando um objeto usuário
+        Usuario user = new Usuario(login, nome, sobrenome);
+        //Definindo a senha para o objeto usuário
+        user.setPswd(pswd);
+        //Criando a próxima janela
+        JanelaCadastroConfirmarSenha janelaCadastroConfirmarSenha = new JanelaCadastroConfirmarSenha();
+        //Passando o controle para a próxima janela
+        janelaCadastroConfirmarSenha.setCore(core);
+        //Passando o usuário para a próxima janela
+        janelaCadastroConfirmarSenha.setUser(user);
+        //Definindo a próxima janela como visível
+        janelaCadastroConfirmarSenha.setVisible(true);
+        //Descartando a janela atual
         this.dispose();
     }//GEN-LAST:event_buttonOkActionPerformed
 
     private void fieldInputSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldInputSenhaKeyPressed
+        //Se apertarem enter no campo da senha...
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            //... ative o botão OK
             buttonOk.doClick();
         }
     }//GEN-LAST:event_fieldInputSenhaKeyPressed
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
-        // TODO add your handling code here:
+        //Criando a próxima janela
         JanelaInicial janelaInicial = new JanelaInicial();
-        this.dispose();
+        //Passando o controle para a próxima janela
+        janelaInicial.setCore(core);
+        //Definindo a nova janela como visível
         janelaInicial.setVisible(true);
+        //Descartando a janela atual
+        this.dispose();
     }//GEN-LAST:event_buttonCancelarActionPerformed
 
     /**

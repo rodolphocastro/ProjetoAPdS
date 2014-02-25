@@ -5,15 +5,18 @@
 package gui;
 
 import controle.Controle;
+import controle.Usuario;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Thiago Matos
  */
-public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
+public class JanelaCadastroConfirmarSenha extends javax.swing.JFrame {
 
     //Controle do programa
     private Controle core;
+    private Usuario user;
     
     /**
      * Método para definir um controle do programa para esta janela
@@ -24,9 +27,17 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
     }
     
     /**
+     * Método para definir o usuário atual na janela
+     * @param newUser o usuário a ser definido como atual
+     */
+    public void setUser(Usuario newUser){
+        this.user = newUser;
+    }
+    
+    /**
      * Creates new form JanelaCadastroConfirmaçãoSenha
      */
-    public JanelaCadastroConfirmaçãoSenha() {
+    public JanelaCadastroConfirmarSenha() {
         initComponents();
     }
 
@@ -64,6 +75,11 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
         buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCancelar.setText("Cancelar");
         buttonCancelar.setToolTipText("Retornar a janela anterior");
+        buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCancelarActionPerformed(evt);
+            }
+        });
 
         buttonOk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_ok.png"))); // NOI18N
         buttonOk.setText("Ok");
@@ -114,14 +130,43 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fieldInputSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputSenhaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_fieldInputSenhaActionPerformed
 
     private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
-        JanelaMainMenu mainMenu = new JanelaMainMenu();
-        mainMenu.setVisible(true);
-        this.dispose();
+        //Fazendo leitura dos dados informados pelo usuário
+        String pswd = new String(this.fieldInputSenha.getPassword());
+        //Comparando a senha lida com a senha informada na janela anterior
+        if(pswd.equals(user.getPswd())){
+            //Senhas são iguais, cadastrar o usuário...
+            core.inserirUsuario(user, pswd);
+            //Validar o usuário inserido
+            if(core.validarUsuario(user.getLogin(), pswd)){
+                //Usuário válido, criar próxima janela...
+                JanelaMainMenu janelaMainMenu = new JanelaMainMenu();
+                //Passando o controle para a próxima janela
+                janelaMainMenu.setCore(core);
+                //Definindo a próxima janela como visível
+                janelaMainMenu.setVisible(true);
+                //Descartando a janela atual
+                this.dispose();
+            }
+        }else{
+            //Senhas diferentes.
+            JOptionPane.showMessageDialog(null, "A senha informada não confere.");
+        }
     }//GEN-LAST:event_buttonOkActionPerformed
+
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+        //Criando a próxima janela
+        JanelaCadastroUsuario janelaCadastroUsuario = new JanelaCadastroUsuario();
+        //Passando o o controle para a próxima janela
+        janelaCadastroUsuario.setCore(core);
+        //Definindo a nova janela como visível
+        janelaCadastroUsuario.setVisible(true);
+        //Descartando a janela atual
+        this.dispose();
+    }//GEN-LAST:event_buttonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,20 +185,20 @@ public class JanelaCadastroConfirmaçãoSenha extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroConfirmaçãoSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaCadastroConfirmarSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroConfirmaçãoSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaCadastroConfirmarSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroConfirmaçãoSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaCadastroConfirmarSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroConfirmaçãoSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaCadastroConfirmarSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JanelaCadastroConfirmaçãoSenha().setVisible(true);
+                new JanelaCadastroConfirmarSenha().setVisible(true);
             }
         });
     }

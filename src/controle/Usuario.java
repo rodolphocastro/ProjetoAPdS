@@ -5,8 +5,8 @@ package controle;
  * @author alvesrc
  */
 public class Usuario {
-    private String login;
-    private String nome, sNome;
+    private final String login;
+    private final String nome, sNome;
     private String pswd;
     
     public Usuario(String login, String nome, String sNome) {
