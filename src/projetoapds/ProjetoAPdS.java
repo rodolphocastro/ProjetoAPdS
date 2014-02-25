@@ -1,8 +1,6 @@
 package projetoapds;
 
 import controle.Controle;
-import controle.Usuario;
-import dados.Ganho;
 import gui.JanelaInicial;
 
 /**

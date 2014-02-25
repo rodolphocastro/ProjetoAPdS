@@ -9,6 +9,7 @@ import java.sql.Statement;
 import dados.*;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  * Classe responsável por controlar o acesso ao banco de dados
@@ -129,7 +130,10 @@ public class Controle {
             stmt.executeUpdate(sqlCmd);
             stmt.close();
         } catch (Exception err) {
+            //Log mais detalhado para o erro.
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+            //Janela mais simples para o usuário.
+            JOptionPane.showMessageDialog(null, "Os dados informados já estão cadastrados no sistema.");
             return false;
         }
         

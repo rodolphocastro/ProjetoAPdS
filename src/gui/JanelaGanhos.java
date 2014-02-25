@@ -633,8 +633,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Os dados foram cadastrados com êxito.");
         }else{
             //...houve um erro ao cadastrar o ganho.
-            //@todo Melhorar mensagens dos dialogs.
-            JOptionPane.showMessageDialog(null, "Os dados não puderam ser cadastrados.");
+            //O erro será exibido pelo próprio método de inserir
         }
     }//GEN-LAST:event_buttonCadastroGanhoAdicionarActionPerformed
 
