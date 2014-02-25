@@ -315,6 +315,9 @@
                 <Property name="text" type="java.lang.String" value="Adicionar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cadastrar o ganho no banco de dados."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadastroGanhoAdicionarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

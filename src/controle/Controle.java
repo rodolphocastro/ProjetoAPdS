@@ -166,8 +166,12 @@ public class Controle {
         user = buscarUsuario(login);
         if(user.getLogin().compareToIgnoreCase("notfound")!=0){
             //Login é válido, validar a senha.
+            if(user.getPswd().compareToIgnoreCase(pswd)==0){
+                //User é valido
+                return true;
+            }
         }
-        return true;
+        return false;
     }
     
     /**
@@ -201,12 +205,11 @@ public class Controle {
         try{
             Statement stmt = c.createStatement();
             //dia,mes,ano,desc,login
-            ResultSet rs = stmt.executeQuery("SELECT * FROM GANHO WHERE dia='" + dia + "' and mes = '" + mes + "' and ano = '" + ano + "' and desc = '" + desc + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM GANHO WHERE dia='" + dia + "' and mes = '" + mes + "' and ano = '" + ano + "' and desc = '" + desc + "' and ");
             
             float valor;
             
             valor = rs.getFloat("valor");
-            
             gain = new Ganho(valor, desc, dia, mes, ano);
             
             rs.close();

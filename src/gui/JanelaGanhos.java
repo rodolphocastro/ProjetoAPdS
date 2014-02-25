@@ -201,6 +201,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonCadastroGanhoAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
         buttonCadastroGanhoAdicionar.setText("Adicionar");
         buttonCadastroGanhoAdicionar.setToolTipText("Cadastrar o ganho no banco de dados.");
+        buttonCadastroGanhoAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastroGanhoAdicionarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelCadastrarGanhoLayout = new javax.swing.GroupLayout(panelCadastrarGanho);
         panelCadastrarGanho.setLayout(panelCadastrarGanhoLayout);
@@ -580,6 +585,10 @@ public class JanelaGanhos extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_buttonBuscarGanhoCancelarActionPerformed
+
+    private void buttonCadastroGanhoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoAdicionarActionPerformed
+      
+    }//GEN-LAST:event_buttonCadastroGanhoAdicionarActionPerformed
 
     /**
      * @param args the command line arguments
