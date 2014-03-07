@@ -229,13 +229,10 @@
                               <Component id="labelCadastrarGanhoValor" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="labelCadastrarGanhoDesc" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="fieldInputCadastrarGanhoDesc" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="fieldInputCadastrarGanhoValor" min="-2" pref="136" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="fieldInputCadastrarGanhoDesc" pref="215" max="32767" attributes="0"/>
+                              <Component id="fieldInputCadastrarGanhoValor" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -251,8 +248,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldInputCadastrarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelCadastrarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldInputCadastrarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -275,14 +272,7 @@
                     <Property name="toolTipText" type="java.lang.String" value="Uma breve descri&#xe7;&#xe3;o do ganho a ser cadastrado."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JFormattedTextField" name="fieldInputCadastrarGanhoValor">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="R$ 1.000,00"/>
-                    <Property name="toolTipText" type="java.lang.String" value="O valor do ganho."/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldInputCadastrarGanhoValorActionPerformed"/>
-                  </Events>
+                <Component class="javax.swing.JTextField" name="fieldInputCadastrarGanhoValor">
                 </Component>
               </SubComponents>
             </Container>
@@ -766,11 +756,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="fieldInputBuscarGanhoDesc" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="fieldInputBuscarGanhoValor" min="-2" pref="136" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="fieldInputBuscarGanhoDesc" pref="215" max="32767" attributes="0"/>
+                              <Component id="fieldOutputBuscarGanhoValor" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -786,8 +773,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldInputBuscarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelBuscarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldOutputBuscarGanhoValor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -810,20 +797,10 @@
                     <Property name="toolTipText" type="java.lang.String" value="A descri&#xe7;&#xe3;o do ganho a ser buscado."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JFormattedTextField" name="fieldInputBuscarGanhoValor">
+                <Component class="javax.swing.JTextField" name="fieldOutputBuscarGanhoValor">
                   <Properties>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder>
-                          <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="O valor do ganho a ser buscado."/>
+                    <Property name="editable" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldInputBuscarGanhoValorActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>

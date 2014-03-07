@@ -55,7 +55,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         labelCadastrarGanhoDesc = new javax.swing.JLabel();
         labelCadastrarGanhoValor = new javax.swing.JLabel();
         fieldInputCadastrarGanhoDesc = new javax.swing.JTextField();
-        fieldInputCadastrarGanhoValor = new javax.swing.JFormattedTextField();
+        fieldInputCadastrarGanhoValor = new javax.swing.JTextField();
         buttonCadastroGanhoLimpar = new javax.swing.JButton();
         buttonCadastroGanhoCancelar = new javax.swing.JButton();
         buttonCadastroGanhoAdicionar = new javax.swing.JButton();
@@ -87,7 +87,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         labelBuscarGanhoDesc = new javax.swing.JLabel();
         labelBuscarGanhoValor = new javax.swing.JLabel();
         fieldInputBuscarGanhoDesc = new javax.swing.JTextField();
-        fieldInputBuscarGanhoValor = new javax.swing.JFormattedTextField();
+        fieldOutputBuscarGanhoValor = new javax.swing.JTextField();
         buttonBuscarGanhoLimpar = new javax.swing.JButton();
         buttonBuscarGanhoCancelar = new javax.swing.JButton();
         buttonBuscarGanhoBuscar = new javax.swing.JButton();
@@ -161,14 +161,6 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         fieldInputCadastrarGanhoDesc.setToolTipText("Uma breve descrição do ganho a ser cadastrado.");
 
-        fieldInputCadastrarGanhoValor.setText("R$ 1.000,00");
-        fieldInputCadastrarGanhoValor.setToolTipText("O valor do ganho.");
-        fieldInputCadastrarGanhoValor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldInputCadastrarGanhoValorActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelCadastroGanhoDadosLayout = new javax.swing.GroupLayout(panelCadastroGanhoDados);
         panelCadastroGanhoDados.setLayout(panelCadastroGanhoDadosLayout);
         panelCadastroGanhoDadosLayout.setHorizontalGroup(
@@ -180,10 +172,8 @@ public class JanelaGanhos extends javax.swing.JFrame {
                     .addComponent(labelCadastrarGanhoDesc, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldInputCadastrarGanhoDesc)
-                    .addGroup(panelCadastroGanhoDadosLayout.createSequentialGroup()
-                        .addComponent(fieldInputCadastrarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 79, Short.MAX_VALUE)))
+                    .addComponent(fieldInputCadastrarGanhoDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(fieldInputCadastrarGanhoValor))
                 .addContainerGap())
         );
         panelCadastroGanhoDadosLayout.setVerticalGroup(
@@ -195,8 +185,8 @@ public class JanelaGanhos extends javax.swing.JFrame {
                     .addComponent(fieldInputCadastrarGanhoDesc))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fieldInputCadastrarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelCadastrarGanhoValor))
+                    .addComponent(labelCadastrarGanhoValor)
+                    .addComponent(fieldInputCadastrarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -477,13 +467,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         fieldInputBuscarGanhoDesc.setToolTipText("A descrição do ganho a ser buscado.");
 
-        fieldInputBuscarGanhoValor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        fieldInputBuscarGanhoValor.setToolTipText("O valor do ganho a ser buscado.");
-        fieldInputBuscarGanhoValor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldInputBuscarGanhoValorActionPerformed(evt);
-            }
-        });
+        fieldOutputBuscarGanhoValor.setEditable(false);
 
         javax.swing.GroupLayout panelCadastroGanhoDados1Layout = new javax.swing.GroupLayout(panelCadastroGanhoDados1);
         panelCadastroGanhoDados1.setLayout(panelCadastroGanhoDados1Layout);
@@ -496,10 +480,8 @@ public class JanelaGanhos extends javax.swing.JFrame {
                     .addComponent(labelBuscarGanhoDesc, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldInputBuscarGanhoDesc)
-                    .addGroup(panelCadastroGanhoDados1Layout.createSequentialGroup()
-                        .addComponent(fieldInputBuscarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 79, Short.MAX_VALUE)))
+                    .addComponent(fieldInputBuscarGanhoDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(fieldOutputBuscarGanhoValor))
                 .addContainerGap())
         );
         panelCadastroGanhoDados1Layout.setVerticalGroup(
@@ -511,8 +493,8 @@ public class JanelaGanhos extends javax.swing.JFrame {
                     .addComponent(fieldInputBuscarGanhoDesc))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCadastroGanhoDados1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fieldInputBuscarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelBuscarGanhoValor))
+                    .addComponent(labelBuscarGanhoValor)
+                    .addComponent(fieldOutputBuscarGanhoValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -593,14 +575,6 @@ public class JanelaGanhos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldInputCadastrarGanhoValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputCadastrarGanhoValorActionPerformed
-        
-    }//GEN-LAST:event_fieldInputCadastrarGanhoValorActionPerformed
-
-    private void fieldInputBuscarGanhoValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldInputBuscarGanhoValorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldInputBuscarGanhoValorActionPerformed
-
     private void buttonCadastroGanhoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoCancelarActionPerformed
        // Descartando a janela atual
         this.dispose();
@@ -637,8 +611,26 @@ public class JanelaGanhos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonCadastroGanhoAdicionarActionPerformed
 
+    private void limparFields(){
+        this.fieldInputBuscarGanhoDesc.setText("");
+        this.fieldOutputBuscarGanhoValor.setText("");
+        this.fieldInputCadastrarGanhoDesc.setText("");
+        this.fieldInputCadastrarGanhoValor.setText("");
+        this.fieldInputRemoverGanhoDesc.setText("");
+        this.spinnerCadastroGanhoDataAno.setValue((int) 2000);
+        this.spinnerCadastroGanhoDataMes.setValue((int) 1);
+        this.spinnerCadastroGanhoDataDia.setValue((int) 1);
+        this.spinnerBuscarGanhoDataAno.setValue((int) 2000);
+        this.spinnerBuscarGanhoDataMes.setValue((int) 1);
+        this.spinnerBuscarGanhoDataDia.setValue((int) 1);
+        this.spinnerRemoverGanhoAno.setValue((int) 2000);
+        this.spinnerRemoverGanhoMes.setValue((int) 1);
+        this.spinnerRemoverGanhoDia.setValue((int) 1);
+        
+    }
     private void buttonCadastroGanhoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroGanhoLimparActionPerformed
         //@todo Implementar método para limpar TODOS os campos da JanelaGanhos
+        this.limparFields();
     }//GEN-LAST:event_buttonCadastroGanhoLimparActionPerformed
 
     private void buttonRemoverGanhoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverGanhoLimparActionPerformed
@@ -694,10 +686,10 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private javax.swing.JButton buttonRemoverGanhoLimpar;
     private javax.swing.JButton buttonRemoverGanhoRemover;
     private javax.swing.JTextField fieldInputBuscarGanhoDesc;
-    private javax.swing.JFormattedTextField fieldInputBuscarGanhoValor;
     private javax.swing.JTextField fieldInputCadastrarGanhoDesc;
-    private javax.swing.JFormattedTextField fieldInputCadastrarGanhoValor;
+    private javax.swing.JTextField fieldInputCadastrarGanhoValor;
     private javax.swing.JTextField fieldInputRemoverGanhoDesc;
+    private javax.swing.JTextField fieldOutputBuscarGanhoValor;
     private javax.swing.JLabel labelBuscarGanhoDataAno;
     private javax.swing.JLabel labelBuscarGanhoDataDia;
     private javax.swing.JLabel labelBuscarGanhoDataMes;

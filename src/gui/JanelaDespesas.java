@@ -206,6 +206,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonCadastrarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_adicionar.png"))); // NOI18N
         buttonCadastrarDespesaAdicionar.setText("Adicionar");
         buttonCadastrarDespesaAdicionar.setToolTipText("Cadastrar a despesa no banco de dados.");
+        buttonCadastrarDespesaAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastrarDespesaAdicionarActionPerformed(evt);
+            }
+        });
 
         buttonCadastrarDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonCadastrarDespesaCancelar.setText("Cancelar");
@@ -608,6 +613,10 @@ public class JanelaDespesas extends javax.swing.JFrame {
     private void buttonBuscarDespesaLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarDespesaLimparActionPerformed
         //@todo Implementar método para limpar TODOS os campos da JanelaDespesas
     }//GEN-LAST:event_buttonBuscarDespesaLimparActionPerformed
+
+    private void buttonCadastrarDespesaAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarDespesaAdicionarActionPerformed
+        // @todo: Implementar o cadastro de despesas
+    }//GEN-LAST:event_buttonCadastrarDespesaAdicionarActionPerformed
 
     /**
      * @param args the command line arguments

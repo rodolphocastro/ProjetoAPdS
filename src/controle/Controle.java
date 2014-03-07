@@ -40,7 +40,6 @@ public class Controle {
             if(!pathCreated){
                 System.out.println("[DEBUG] Ocorreu um erro ao criar as pastas.");
             }
-            
             //Inicializando a conexão
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:".concat(Commons.PATH_TO_DATABASE));

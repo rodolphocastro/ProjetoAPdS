@@ -173,9 +173,11 @@ public class JanelaOpcoes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void buttonLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogoutActionPerformed
-        this.dispose();
         JanelaInicial janelaInicial = new JanelaInicial();
+        core = null;
+        janelaInicial.setCore(new Controle());
         janelaInicial.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_buttonLogoutActionPerformed
 
     /**
