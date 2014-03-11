@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  * Classe responsável por controlar o acesso ao banco de dados
  * @author alvesrc
  */
-public class Controle {
+public class Controle implements Commons{
     private Connection c;
     private Usuario user;
     
