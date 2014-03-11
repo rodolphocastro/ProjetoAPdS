@@ -211,7 +211,7 @@ public class Controle implements Commons{
      * @param desc a descrição do ganho a ser buscado
      * @return O resultado da consulta na database
      */
-    private Ganho buscarGanho(int dia, int mes, int ano, String desc){
+    public Ganho buscarGanho(int dia, int mes, int ano, String desc){
         Ganho gain = new Ganho(-1,"NOTFOUND",0,0,0);
         
         try{
@@ -241,7 +241,7 @@ public class Controle implements Commons{
      * @param desc a descrição da despesa a ser buscada
      * @return O resultado da consulta na database
      */
-    private Despesa buscarDespesa(int dia, int mes, int ano, String desc){
+    public Despesa buscarDespesa(int dia, int mes, int ano, String desc){
         Despesa loss = new Despesa(-1, "NOTFOUND", 0, 0, 0);
         
         try{

@@ -18,5 +18,6 @@ public class ProjetoAPdS {
         janelaInicial.setCore(core);
         //Definindo a janela como visivel
         janelaInicial.setVisible(true);
+        
     }
 }
