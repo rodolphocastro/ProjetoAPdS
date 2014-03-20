@@ -91,6 +91,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonBuscarDespesaLimpar = new javax.swing.JButton();
         buttonBuscarDespesaAdicionar = new javax.swing.JButton();
         buttonBuscarDespesaCancelar = new javax.swing.JButton();
+        panelListarDespesa = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Despesas");
@@ -567,6 +568,19 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         mainTabbedPane.addTab("Buscar", panelBuscarDespesa);
 
+        javax.swing.GroupLayout panelListarDespesaLayout = new javax.swing.GroupLayout(panelListarDespesa);
+        panelListarDespesa.setLayout(panelListarDespesaLayout);
+        panelListarDespesaLayout.setHorizontalGroup(
+            panelListarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 473, Short.MAX_VALUE)
+        );
+        panelListarDespesaLayout.setVerticalGroup(
+            panelListarDespesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 236, Short.MAX_VALUE)
+        );
+
+        mainTabbedPane.addTab("Listar", panelListarDespesa);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -692,6 +706,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
     private javax.swing.JPanel panelCadastrarDespesa;
     private javax.swing.JPanel panelCadastrarDespesaDados;
     private javax.swing.JPanel panelCadastrarDespesaData;
+    private javax.swing.JPanel panelListarDespesa;
     private javax.swing.JPanel panelRemoverDespesaDados;
     private javax.swing.JPanel panelRemoverDespesaData;
     private javax.swing.JPanel panellRemoverDespesa;

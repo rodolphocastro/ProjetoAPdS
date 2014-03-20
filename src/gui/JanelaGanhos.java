@@ -91,6 +91,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonBuscarGanhoLimpar = new javax.swing.JButton();
         buttonBuscarGanhoCancelar = new javax.swing.JButton();
         buttonBuscarGanhoBuscar = new javax.swing.JButton();
+        panelListarGanho = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[SGF - 2014] Ganhos");
@@ -561,6 +562,19 @@ public class JanelaGanhos extends javax.swing.JFrame {
 
         mainTabbedPane.addTab("Buscar", panelBuscarGanho);
 
+        javax.swing.GroupLayout panelListarGanhoLayout = new javax.swing.GroupLayout(panelListarGanho);
+        panelListarGanho.setLayout(panelListarGanhoLayout);
+        panelListarGanhoLayout.setHorizontalGroup(
+            panelListarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 473, Short.MAX_VALUE)
+        );
+        panelListarGanhoLayout.setVerticalGroup(
+            panelListarGanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 237, Short.MAX_VALUE)
+        );
+
+        mainTabbedPane.addTab("Listar", panelListarGanho);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -715,6 +729,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private javax.swing.JPanel panelCadastroGanhoDados1;
     private javax.swing.JPanel panelCadastroGanhoData;
     private javax.swing.JPanel panelCadastroGanhoData1;
+    private javax.swing.JPanel panelListarGanho;
     private javax.swing.JPanel panelRemoverGanhoDados;
     private javax.swing.JPanel panelRemoverGanhoData;
     private javax.swing.JSpinner spinnerBuscarGanhoDataAno;
