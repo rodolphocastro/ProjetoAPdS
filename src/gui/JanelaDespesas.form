@@ -669,7 +669,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="fieldInputBuscarDespesaDesc" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
-                              <Component id="fieldInputBuscarDespesaValor" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="fieldOutputBuscarDespesaValor" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -686,7 +686,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelBuscarDespesaValor" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldInputBuscarDespesaValor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldOutputBuscarDespesaValor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -709,12 +709,12 @@
                     <Property name="toolTipText" type="java.lang.String" value="A descri&#xe7;&#xe3;o da despesa a ser buscada."/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JFormattedTextField" name="fieldInputBuscarDespesaValor">
+                <Component class="javax.swing.JFormattedTextField" name="fieldOutputBuscarDespesaValor">
                   <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
                     <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                       <Format subtype="0" type="4"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="R$ 1.000,00"/>
                     <Property name="toolTipText" type="java.lang.String" value="O valor da despesa a ser buscada."/>
                   </Properties>
                 </Component>
@@ -838,6 +838,9 @@
                 <Property name="text" type="java.lang.String" value="Buscar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Buscar despesa no banco de dados."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarDespesaAdicionarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="buttonBuscarDespesaCancelar">
               <Properties>

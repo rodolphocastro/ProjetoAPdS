@@ -669,6 +669,7 @@ public class JanelaGanhos extends javax.swing.JFrame {
         ano = (int) this.spinnerBuscarGanhoDataAno.getValue();
         //Realizando busca
         Ganho g = this.core.buscarGanho(dia, mes, ano, desc);
+        //Apresentando o valor retornado
         this.fieldOutputBuscarGanhoValor.setText(String.valueOf(g.getValor()));
     }//GEN-LAST:event_buttonBuscarGanhoBuscarActionPerformed
 

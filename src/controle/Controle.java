@@ -88,7 +88,7 @@ public class Controle implements Commons{
      */
     public boolean inserirDespesa(Despesa despesa){
         //Criando o comando SQL para inserir a despesa
-        String sqlCmd = "INSERT INTO DESPESA VALUES(" + despesa.gerarSQL() + " '" + user.getLogin() + "'";
+        String sqlCmd = "INSERT INTO DESPESA VALUES(" + despesa.gerarSQL() + " '" + user.getLogin() + "')";
         try{
             //Criando o statement
             Statement stmt = c.createStatement();
@@ -98,6 +98,7 @@ public class Controle implements Commons{
         }catch(Exception err){
             //em caso de erro, informar o erro.
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+            JOptionPane.showMessageDialog(null, "Os dados informados já estão cadastrados no sistema.");
             return false;
         }
         return true;
@@ -247,7 +248,7 @@ public class Controle implements Commons{
         
         try{
             Statement stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM DESPESA WHERE dia = '" + dia + "'and mes = '" + mes + "' and ano = '" + ano + "'and desc = '" + desc + "' and login = '" + user.getLogin() + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM DESPESA WHERE dia='" + dia + "' and mes = '" + mes + "' and ano = '" + ano + "' and desc = '" + desc + "' and login = '" + user.getLogin() + "'");
             
             float valor = rs.getFloat("valor");
             

@@ -7,6 +7,9 @@
 package gui;
 
 import controle.Controle;
+import dados.Despesa;
+import dados.Ganho;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -80,7 +83,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
         labelBuscarDespesaDesc = new javax.swing.JLabel();
         labelBuscarDespesaValor = new javax.swing.JLabel();
         fieldInputBuscarDespesaDesc = new javax.swing.JTextField();
-        fieldInputBuscarDespesaValor = new javax.swing.JFormattedTextField();
+        fieldOutputBuscarDespesaValor = new javax.swing.JFormattedTextField();
         panelBuscarDespesaData = new javax.swing.JPanel();
         labelBuscarDespesaDia = new javax.swing.JLabel();
         labelBuscarDespesaMes = new javax.swing.JLabel();
@@ -418,9 +421,9 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         fieldInputBuscarDespesaDesc.setToolTipText("A descrição da despesa a ser buscada.");
 
-        fieldInputBuscarDespesaValor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
-        fieldInputBuscarDespesaValor.setText("R$ 1.000,00");
-        fieldInputBuscarDespesaValor.setToolTipText("O valor da despesa a ser buscada.");
+        fieldOutputBuscarDespesaValor.setEditable(false);
+        fieldOutputBuscarDespesaValor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        fieldOutputBuscarDespesaValor.setToolTipText("O valor da despesa a ser buscada.");
 
         javax.swing.GroupLayout panelBuscarDespesaDadosLayout = new javax.swing.GroupLayout(panelBuscarDespesaDados);
         panelBuscarDespesaDados.setLayout(panelBuscarDespesaDadosLayout);
@@ -434,7 +437,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(fieldInputBuscarDespesaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldInputBuscarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldOutputBuscarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBuscarDespesaDadosLayout.setVerticalGroup(
@@ -447,7 +450,7 @@ public class JanelaDespesas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelBuscarDespesaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelBuscarDespesaValor)
-                    .addComponent(fieldInputBuscarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldOutputBuscarDespesaValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -515,6 +518,11 @@ public class JanelaDespesas extends javax.swing.JFrame {
         buttonBuscarDespesaAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
         buttonBuscarDespesaAdicionar.setText("Buscar");
         buttonBuscarDespesaAdicionar.setToolTipText("Buscar despesa no banco de dados.");
+        buttonBuscarDespesaAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarDespesaAdicionarActionPerformed(evt);
+            }
+        });
 
         buttonBuscarDespesaCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_cancelar.png"))); // NOI18N
         buttonBuscarDespesaCancelar.setText("Cancelar");
@@ -627,8 +635,38 @@ public class JanelaDespesas extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonBuscarDespesaLimparActionPerformed
 
     private void buttonCadastrarDespesaAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarDespesaAdicionarActionPerformed
-        // @todo: Implementar o cadastro de despesas
+        //Fazendo leitura dos campos
+        String desc = this.fieldInputCadastrarDespesaDesc.getText();
+        float valor = Float.parseFloat(this.fieldInputCadastrarDespesaValor.getText());
+        int dia, mes, ano;
+        dia = (int) this.spinnerCadastrarDespesaDia.getValue();
+        mes = (int) this.spinnerCadastrarDespesaMes.getValue();
+        ano = (int) this.spinnerCadastrarDespesaAno.getValue();
+        //Criando novo objeto ganho
+        Despesa d = new Despesa(valor, desc, dia, mes, ano);
+        //Tentando inserir o ganho na database
+        if(core.inserirDespesa(d)){
+            //...ganho cadastrado com êxito.
+            //@todo Melhorar mensagens dos dialogs.
+            JOptionPane.showMessageDialog(null, "Os dados foram cadastrados com êxito.");
+        }else{
+            //...houve um erro ao cadastrar o ganho.
+            //O erro será exibido pelo próprio método de inserir
+        }
     }//GEN-LAST:event_buttonCadastrarDespesaAdicionarActionPerformed
+
+    private void buttonBuscarDespesaAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarDespesaAdicionarActionPerformed
+        //Fazendo leitura das variaveis
+        String desc = this.fieldInputBuscarDespesaDesc.getText();
+        int dia, mes, ano;
+        dia = (int) this.spinnerBuscarDespesaDia.getValue();
+        mes = (int) this.spinnerBuscarDespesaMes.getValue();
+        ano = (int) this.spinnerBuscarDespesaAno.getValue();
+        //Realizando busca
+        Despesa d = this.core.buscarDespesa(dia, mes, ano, desc);
+        //Apresentando o valor retornado
+        this.fieldOutputBuscarDespesaValor.setText(String.valueOf(d.getValor()));
+    }//GEN-LAST:event_buttonBuscarDespesaAdicionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -676,10 +714,10 @@ public class JanelaDespesas extends javax.swing.JFrame {
     private javax.swing.JButton buttonRemoverDespesaLimpar;
     private javax.swing.JButton buttonRemoverDespesaRemover;
     private javax.swing.JTextField fieldInputBuscarDespesaDesc;
-    private javax.swing.JFormattedTextField fieldInputBuscarDespesaValor;
     private javax.swing.JTextField fieldInputCadastrarDespesaDesc;
     private javax.swing.JFormattedTextField fieldInputCadastrarDespesaValor;
     private javax.swing.JTextField fieldInputRemoverDespesaDesc;
+    private javax.swing.JFormattedTextField fieldOutputBuscarDespesaValor;
     private javax.swing.JLabel labelBuscarDespesaAno;
     private javax.swing.JLabel labelBuscarDespesaAviso;
     private javax.swing.JLabel labelBuscarDespesaDesc;
