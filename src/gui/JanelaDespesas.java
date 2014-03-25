@@ -110,8 +110,6 @@ public class JanelaDespesas extends javax.swing.JFrame {
 
         fieldInputCadastrarDespesaDesc.setToolTipText("Uma breve descrição da despesa a ser cadastrada.");
 
-        fieldInputCadastrarDespesaValor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
-        fieldInputCadastrarDespesaValor.setText("R$ 1.000,00");
         fieldInputCadastrarDespesaValor.setToolTipText("O valor da despesa.");
 
         javax.swing.GroupLayout panelCadastrarDespesaDadosLayout = new javax.swing.GroupLayout(panelCadastrarDespesaDados);

@@ -520,6 +520,11 @@ public class JanelaGanhos extends javax.swing.JFrame {
         buttonBuscarGanhoBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/24px_buscar.png"))); // NOI18N
         buttonBuscarGanhoBuscar.setText("Buscar");
         buttonBuscarGanhoBuscar.setToolTipText("Buscar ganho no banco de dados.");
+        buttonBuscarGanhoBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarGanhoBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelBuscarGanhoLayout = new javax.swing.GroupLayout(panelBuscarGanho);
         panelBuscarGanho.setLayout(panelBuscarGanhoLayout);
@@ -654,6 +659,18 @@ public class JanelaGanhos extends javax.swing.JFrame {
     private void buttonBuscarGanhoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarGanhoLimparActionPerformed
         //@todo Implementar método para limpar TODOS os campos da JanelaGanhos
     }//GEN-LAST:event_buttonBuscarGanhoLimparActionPerformed
+
+    private void buttonBuscarGanhoBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarGanhoBuscarActionPerformed
+        //Fazendo leitura das variaveis
+        String desc = this.fieldInputBuscarGanhoDesc.getText();
+        int dia, mes, ano;
+        dia = (int) this.spinnerBuscarGanhoDataDia.getValue();
+        mes = (int) this.spinnerBuscarGanhoDataMes.getValue();
+        ano = (int) this.spinnerBuscarGanhoDataAno.getValue();
+        //Realizando busca
+        Ganho g = this.core.buscarGanho(dia, mes, ano, desc);
+        this.fieldOutputBuscarGanhoValor.setText(String.valueOf(g.getValor()));
+    }//GEN-LAST:event_buttonBuscarGanhoBuscarActionPerformed
 
     /**
      * @param args the command line arguments

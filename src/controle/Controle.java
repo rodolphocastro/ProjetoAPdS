@@ -229,6 +229,7 @@ public class Controle implements Commons{
             
         }catch(Exception err){
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.DATABASE_PK_NOT_UNIQUE));
+            JOptionPane.showMessageDialog(null, "Os dados informados não foram encontrados.");
         }
         return gain;
     }
@@ -256,6 +257,7 @@ public class Controle implements Commons{
         }catch(Exception err){
             //@todo Criar novo código de erro para quando resultSet for inválido.
             System.err.println(ErrorHandler.gerarRelatorio(err, Errors.UNKNOWN_ERROR));
+            JOptionPane.showMessageDialog(null, "Os dados informados não foram encontrados.");
         }
         
         return loss;
